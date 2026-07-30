@@ -1,0 +1,1261 @@
+{
+  "meta": {
+    "title": "러시아 노동법 Checker — HR용",
+    "audience": "러시아 법인 한국인 인사총괄 (러시아법 배경지식 없음 전제)",
+    "lastUpdated": "2026-07-23",
+    "note": "한글 기본 + 러시아어 용어는 영어 병기(러시아어/English). 출처는 각 항목 sources 참조.",
+    "statusLegend": {
+      "시행중": "이미 발효되어 지금 준수해야 하는 규정",
+      "시행예정": "법률 공포 완료, 발효일이 미래",
+      "계류중": "국가두마(Госдума/State Duma) 심의 중인 법안",
+      "논의중": "발의 예정 또는 초기 논의 단계"
+    }
+  },
+  "basicsGuide": {
+    "intro": "러시아 노동관계는 노동법전(Трудовой кодекс РФ/Labor Code, 약칭 ТК РФ/Labor Code)이 기본법이며, 한국 근로기준법보다 절차 형식주의가 강합니다. 문서(서면 동의·приказ/prikaz/order·규정) 없이는 어떤 인사 조치도 유효하지 않다고 보는 것이 안전합니다.",
+    "keyPoints": [
+      {
+        "title": "ЛНА / LNA — Local Normative Acts (로컬 규범문서)",
+        "desc": "취업규칙(ПВТР/PVTR), 보수규정, 개인정보규정 등 회사 내부 규정. 러시아에서는 법이 바뀌면 ЛНА/LNA를 개정하고 직원 서명(ознакомление под подпись/sign-off by employee)을 받아야 효력이 생김. 법 개정 대응의 80%는 ЛНА 개정 작업."
+      },
+      {
+        "title": "ГИТ / GIT — State Labor Inspectorate (국가노동감독청)",
+        "desc": "한국 고용노동부 근로감독관에 해당. Роструд/Rostrud 산하. 직원 신고 기반 조사 비중이 높고, 문서 미비만으로도 벌금 부과."
+      },
+      {
+        "title": "приказ / prikaz — HR Order (인사명령서)",
+        "desc": "채용·해고·휴가·담당자 지정 등 모든 인사 조치는 서면 приказ로 발행하고 직원 서명을 받는 것이 원칙."
+      },
+      {
+        "title": "КЭДО / KEDO — HR e-Document System (인사 전자문서시스템)",
+        "desc": "인사 문서를 전자서명으로 처리하는 제도. 도입하려면 별도 규정 제정 + 직원 개별 서면 동의 필요."
+      },
+      {
+        "title": "МРОТ / MROT — Minimum Wage (최저임금)",
+        "desc": "연방 최저임금. 모스크바 등 지역은 별도의 더 높은 지역 최저임금이 있으므로 항상 지역 기준으로 점검."
+      },
+      {
+        "title": "воинский учёт / voinsky uchyot — Military Registration (병역 등록)",
+        "desc": "모든 법인은 러시아인 병역 대상 직원의 명부를 관리하고 군사위원회(военкомат/voenkomat)에 보고할 의무가 있음. 외국인 직원은 대상 아님."
+      },
+      {
+        "title": "ВКС / VKS — Highly Qualified Specialist (고급전문인력)",
+        "desc": "Высококвалифицированный специалист. 분기당 75만 루블 이상 급여 요건을 충족하는 외국인 전문가 제도. 한국인 주재원 대부분이 이 지위로 근무. 쿼터 면제·3년 워크퍼밋."
+      },
+      {
+        "title": "협의 라인 기본 순서",
+        "desc": "① 현지 노무·법무 자문사(또는 사내 법무)에 해석 확인 → ② 본사 HR·법무에 리스크 보고 → ③ ЛНА·계약서 개정안 작성 → ④ 직원 통지·서명 → ⑤ 시행 및 기록 보관. 급여 관련은 회계법인(아웃소싱 시) 병행 협의."
+      }
+    ],
+    "i18n": {
+      "en": {
+        "intro": "Russian labor relations are governed primarily by the Labor Code (TK RF), which follows procedural formalities much more strictly than Korea's Labor Standards Act. It's safest to assume that no HR action is valid without documentation (written consent, a prikaz, or an internal regulation).",
+        "keyPoints": [
+          {
+            "title": "LNA — Local Normative Acts",
+            "desc": "Internal company regulations such as internal labor rules (PVTR), pay regulations, and personal-data regulations. In Russia, whenever a law changes, the LNA must be amended and signed off by each employee to take effect. About 80% of responding to a legal change is amending an LNA."
+          },
+          {
+            "title": "GIT — State Labor Inspectorate",
+            "desc": "Equivalent to Korea's Ministry of Employment and Labor inspectors, operating under Rostrud. Most investigations are triggered by employee complaints, and missing documentation alone is enough to draw a fine."
+          },
+          {
+            "title": "Prikaz — HR Order",
+            "desc": "The rule of thumb: every HR action — hiring, dismissal, leave, appointing a responsible person — must be issued as a written order and signed by the employee."
+          },
+          {
+            "title": "KEDO — HR e-Document System",
+            "desc": "A system for handling HR documents via electronic signature. Adopting it requires establishing a dedicated regulation plus individual written consent from each employee."
+          },
+          {
+            "title": "MROT — Minimum Wage",
+            "desc": "The federal minimum wage. Moscow and other regions set their own, higher regional minimum, so always check the regional figure."
+          },
+          {
+            "title": "Voinsky Uchyot — Military Registration",
+            "desc": "Every legal entity must maintain a roster of Russian employees subject to military registration and report to the military commissariat (voenkomat). Foreign employees are not covered."
+          },
+          {
+            "title": "VKS — Highly Qualified Specialist",
+            "desc": "A status for foreign professionals meeting a minimum salary of RUB 750,000 per quarter. Most Korean expatriates work under this status — it's quota-exempt with a 3-year work permit."
+          },
+          {
+            "title": "Standard consultation sequence",
+            "desc": "① Confirm interpretation with a local labor/legal advisor (or in-house legal) → ② report the risk to HQ HR/Legal → ③ draft the LNA/contract amendment → ④ notify employees and collect signatures → ⑤ implement and keep records. For pay-related matters, coordinate in parallel with your outsourced accounting firm."
+          }
+        ]
+      },
+      "ru": {
+        "intro": "Трудовые отношения в России регулируются прежде всего Трудовым кодексом РФ (ТК РФ), который гораздо строже относится к процедурному оформлению, чем корейское трудовое законодательство. Безопаснее исходить из того, что ни одно кадровое решение не имеет силы без документального оформления (письменное согласие, приказ, локальный акт).",
+        "keyPoints": [
+          {
+            "title": "ЛНА — локальные нормативные акты",
+            "desc": "Внутренние документы компании: ПВТР, положение об оплате труда, положение о персональных данных и др. В России при изменении закона необходимо внести изменения в ЛНА и ознакомить с ними каждого сотрудника под подпись, чтобы они вступили в силу. Около 80% реагирования на изменение законодательства — это работа с ЛНА."
+          },
+          {
+            "title": "ГИТ — Государственная инспекция труда",
+            "desc": "Аналог трудовой инспекции в Корее, подчиняется Роструду. Большинство проверок инициируется по жалобам работников, и одного лишь отсутствия документации достаточно для штрафа."
+          },
+          {
+            "title": "Приказ — кадровый распорядительный документ",
+            "desc": "Общее правило: любое кадровое решение — приём, увольнение, отпуск, назначение ответственного лица — оформляется письменным приказом с ознакомлением сотрудника под подпись."
+          },
+          {
+            "title": "КЭДО — система кадрового электронного документооборота",
+            "desc": "Система оформления кадровых документов с электронной подписью. Для внедрения требуется утверждение отдельного положения и индивидуальное письменное согласие каждого сотрудника."
+          },
+          {
+            "title": "МРОТ — минимальный размер оплаты труда",
+            "desc": "Федеральный минимальный размер оплаты труда. В Москве и других регионах действует свой, более высокий региональный МРОТ — всегда проверяйте региональный показатель."
+          },
+          {
+            "title": "Воинский учёт",
+            "desc": "Каждое юрлицо обязано вести учёт военнообязанных сотрудников-граждан РФ и отчитываться перед военкоматом. Иностранные сотрудники учёту не подлежат."
+          },
+          {
+            "title": "ВКС — высококвалифицированный специалист",
+            "desc": "Статус для иностранных специалистов с зарплатой не менее 750 000 ₽ в квартал. Большинство корейских командированных сотрудников работают в этом статусе — он не подпадает под квоту и даёт разрешение на работу сроком на 3 года."
+          },
+          {
+            "title": "Стандартная последовательность согласования",
+            "desc": "① Уточнить толкование у местного консультанта по трудовому праву (или юротдела) → ② доложить о риске HR/юротделу головного офиса → ③ подготовить проект изменений ЛНА/договора → ④ уведомить сотрудников и собрать подписи → ⑤ внедрить и сохранить документы. Вопросы, связанные с оплатой труда, согласовывать параллельно с аутсорсинговой бухгалтерией."
+          }
+        ]
+      }
+    }
+  },
+  "regulations": [
+    {
+      "id": "LAB-001",
+      "category": "급여·보상",
+      "titleKo": "2026년 연방 최저임금(МРОТ) 20.7% 인상",
+      "titleRu": "МРОТ с 1 января 2026 — 27 093 ₽",
+      "status": "시행중",
+      "impact": "High",
+      "effectiveDate": "2026-01-01",
+      "background": "정부가 2030년까지 최저임금을 단계적으로 크게 올리는 정책 기조. 2026년 인상폭(+20.7%)이 특히 큼.",
+      "whatChanged": "연방 МРОТ/MROT가 22,440루블 → 27,093루블로 인상. 풀타임 근무자의 월 급여(세전)는 이 금액 미만이 될 수 없음. 모스크바는 별도의 더 높은 지역 최저임금이 적용되므로 지역 기준 확인 필수. 부가 변화: 무급 대표(급여 없는 법인장)에 대해서도 МРОТ 기준 사회보험료 납부 의무 신설.",
+      "penalty": "МРОТ 미달 지급 시 КоАП/Admin. Offenses Code 5.27조 벌금(법인 최대 5만₽/건) + 차액 소급 지급. 반복 시 가중.",
+      "hrChecklist": [
+        "전 직원 급여 테이블에서 세전 기본급이 모스크바 지역 최저임금 이상인지 일괄 점검",
+        "파트타임·단시간 근무자는 근무시간 비례 기준으로 재계산",
+        "보수규정(Положение об оплате труда/Pay Regulation)의 최저 등급 급여 갱신",
+        "급여 아웃소싱 회계법인에 2026년 기준 반영 여부 서면 확인"
+      ],
+      "internalDocs": [
+        "보수규정(Положение об оплате труда)",
+        "штатное расписание/staffing table(직제표)",
+        "근로계약서 급여 조항"
+      ],
+      "process": "회계법인에 현재 급여 하한 검증 요청 → 미달자 발견 시 допсоглашение/supplementary agreement(계약 변경 합의서) 체결 → 본사에 인건비 영향 보고",
+      "glossary": [
+        {
+          "term": "штатное расписание",
+          "ko": "직제표 — 직위·급여를 명시한 필수 인사문서",
+          "en": "staffing table"
+        }
+      ],
+      "sources": [
+        "https://kontur.ru/articles/4819",
+        "https://konsugroup.com/en/news/changes-minimal-wage-regional-practice-2026/"
+      ],
+      "titleEn": "MROT (minimum wage) from Jan 1, 2026 — RUB 27,093",
+      "i18n": {
+        "en": {
+          "background": "The government's policy is to raise the minimum wage significantly in stages through 2030. The 2026 increase (+20.7%) is especially large.",
+          "whatChanged": "The federal minimum wage (MROT) rose from RUB 22,440 to RUB 27,093. Full-time employees' monthly pay (before tax) cannot fall below this amount. Moscow applies its own higher regional minimum wage, so always check the regional figure. Additional change: unpaid general directors (with no salary) are now also subject to mandatory social insurance contributions calculated on the MROT base.",
+          "penalty": "Paying below MROT triggers a fine under Administrative Offenses Code Art. 5.27 (up to RUB 50,000 per violation for the company) plus retroactive payment of the shortfall. Penalties increase for repeat violations.",
+          "process": "Ask your accounting/payroll provider to verify the current pay floor → if anyone falls short, sign a supplementary agreement with them → report the payroll cost impact to headquarters.",
+          "hrChecklist": [
+            "Check that every employee's pre-tax base salary meets or exceeds the Moscow regional minimum wage",
+            "Recalculate part-time/reduced-hour staff on a pro-rata basis",
+            "Update the minimum grade salary in the Pay Regulation (Положение об оплате труда)",
+            "Get written confirmation from your outsourced payroll firm that the 2026 threshold has been applied"
+          ],
+          "internalDocs": [
+            "Pay Regulation (Положение об оплате труда)",
+            "Staffing table (штатное расписание)",
+            "Salary clause of the employment contract"
+          ]
+        },
+        "ru": {
+          "background": "Правительство проводит политику поэтапного значительного повышения МРОТ до 2030 года. Рост в 2026 году (+20,7%) особенно велик.",
+          "whatChanged": "Федеральный МРОТ вырос с 22 440 ₽ до 27 093 ₽. Месячная зарплата (до налогов) работника на полной ставке не может быть ниже этой суммы. В Москве действует отдельный, более высокий региональный МРОТ — всегда проверяйте региональный показатель. Дополнительное изменение: за директоров без зарплаты теперь также обязательны страховые взносы, рассчитанные исходя из МРОТ.",
+          "penalty": "Выплата зарплаты ниже МРОТ влечёт штраф по ст. 5.27 КоАП РФ (до 50 000 ₽ за нарушение для юрлица) плюс доплату разницы задним числом. При повторном нарушении штраф увеличивается.",
+          "process": "Запросить у бухгалтерии/аутсорсера проверку текущего минимума зарплат → при обнаружении несоответствия оформить допсоглашение → доложить головному офису о влиянии на ФОТ.",
+          "hrChecklist": [
+            "Проверить, что базовый оклад (до налога) каждого сотрудника не ниже регионального МРОТ Москвы",
+            "Пересчитать зарплату сотрудников на неполной занятости пропорционально отработанному времени",
+            "Обновить минимальный оклад по разрядам в Положении об оплате труда",
+            "Получить письменное подтверждение от аутсорсера по зарплате о применении норматива 2026 года"
+          ],
+          "internalDocs": [
+            "Положение об оплате труда",
+            "Штатное расписание",
+            "Раздел трудового договора об оплате труда"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-002",
+      "category": "급여·보상",
+      "titleKo": "보너스 감액·미지급 규제 강화 (프리미엄 규정 의무화)",
+      "titleRu": "Новые правила премирования и депремирования (144-ФЗ)",
+      "status": "시행중",
+      "impact": "High",
+      "effectiveDate": "2025-09-01",
+      "background": "헌법재판소가 2023년 '회사 마음대로 보너스를 깎는 관행'을 위헌으로 판단(판결 32-П). 이를 반영해 노동법전 135조가 개정됨(2025-06-07 연방법 144-ФЗ).",
+      "whatChanged": "① 보너스의 종류·금액·지급 조건·미지급 사유를 회사 내부 규정(ЛНА/LNA)에 명확히 정해야 함. ② 징계를 이유로 한 보너스 감액은 '징계가 발생한 그 달'에만 가능(분기·연간 보너스 전체 박탈 불가). ③ 감액하더라도 해당 월 총급여의 20%를 초과해 줄일 수 없음.",
+      "penalty": "규정 없이 임의 감액 시 노동분쟁 패소 + 미지급분 지급명령 + ГИТ/GIT 벌금. 임금 관련 위반은 벌금 인상 법안(LAB-007)의 주요 타깃.",
+      "hrChecklist": [
+        "보수규정·보너스규정에 지급 기준(KPI, 산정식, 지급 시기, 미지급 사유)이 구체적으로 명시돼 있는지 점검",
+        "'회사 재량으로 지급할 수 있다' 같은 모호한 문구 삭제·교체",
+        "징계-보너스 연계 조항이 '해당 월, 20% 한도' 원칙에 맞는지 확인",
+        "영업 인센티브 제도가 있다면 산정 기준 문서화 여부 별도 점검"
+      ],
+      "internalDocs": [
+        "보너스규정(Положение о премировании/Bonus Regulation)",
+        "보수규정",
+        "근로계약서 보수 조항"
+      ],
+      "process": "현행 보너스규정을 노무 자문사에 리걸 체크 의뢰 → 개정안 작성 → 직원 서명 공지 → 이후 감액 건은 반드시 서면 근거(징계 приказ/prikaz/order) 확보 후 실행",
+      "glossary": [
+        {
+          "term": "депремирование",
+          "ko": "보너스 감액·미지급 조치",
+          "en": "bonus withdrawal"
+        }
+      ],
+      "sources": [
+        "https://pravovest-audit.ru/nashi-statii-nalogi-i-buhuchet/novyy-poryadok-premirovaniya-i-depremirovaniya-rabotnikov/",
+        "https://www.pro-ability.ru/article_hr/tpost/n8ug8gup21-novie-pravila-premirovaniya-fz-144-fz-ot"
+      ],
+      "titleEn": "New rules on bonuses & bonus withdrawal (Law 144-FZ)",
+      "i18n": {
+        "en": {
+          "background": "In 2023 the Constitutional Court ruled that letting companies cut bonuses at their own discretion was unconstitutional (Ruling No. 32-P). Article 135 of the Labor Code was amended accordingly (Federal Law No. 144-FZ of June 7, 2025).",
+          "whatChanged": "① The types, amounts, payment conditions, and grounds for withholding bonuses must be clearly defined in an internal company regulation (LNA). ② A bonus can only be reduced for the specific month in which the disciplinary infraction occurred (a full quarterly or annual bonus can no longer be forfeited). ③ Even when reduced, the cut cannot exceed 20% of that month's total pay.",
+          "penalty": "Cutting bonuses without a documented basis leads to losing labor disputes, an order to pay the withheld amount, plus a fine from the State Labor Inspectorate (GIT). Wage-related violations are a key target of the pending fine-increase bill (LAB-007).",
+          "process": "Have a labor law advisor review the current bonus regulation for legal compliance → draft an amended version → announce it and collect employee signatures → from then on, any bonus reduction must be backed by a written disciplinary order (prikaz) before it is applied.",
+          "hrChecklist": [
+            "Check that the pay/bonus regulation specifies concrete payment criteria (KPIs, calculation formula, payment timing, grounds for non-payment)",
+            "Remove or replace vague wording such as \"may be paid at the company's discretion\"",
+            "Confirm the disciplinary-bonus linkage clause follows the \"same month, 20% cap\" rule",
+            "If a sales incentive scheme exists, separately verify its calculation basis is documented"
+          ],
+          "internalDocs": [
+            "Bonus Regulation (Положение о премировании)",
+            "Pay Regulation",
+            "Compensation clause of the employment contract"
+          ]
+        },
+        "ru": {
+          "background": "В 2023 году Конституционный суд признал неконституционной практику произвольного лишения премий работодателем (Постановление № 32-П). В связи с этим внесены изменения в ст. 135 ТК РФ (Федеральный закон № 144-ФЗ от 07.06.2025).",
+          "whatChanged": "① Виды, размеры, условия выплаты и основания невыплаты премий должны быть чётко закреплены во внутреннем локальном акте (ЛНА). ② Премию можно уменьшить только за месяц, в котором произошло дисциплинарное нарушение (полностью лишить квартальной или годовой премии больше нельзя). ③ Даже при снижении премия не может быть уменьшена более чем на 20% от общей суммы зарплаты за месяц.",
+          "penalty": "Снижение премии без документального основания приводит к проигрышу в трудовом споре, приказу о доплате и штрафу от ГИТ. Нарушения, связанные с оплатой труда, — один из главных объектов законопроекта об увеличении штрафов (LAB-007).",
+          "process": "Запросить у юриста по трудовому праву проверку действующего положения о премировании → подготовить исправленную редакцию → ознакомить сотрудников под подпись → впредь любое снижение премии проводить только на основании письменного приказа о дисциплинарном взыскании.",
+          "hrChecklist": [
+            "Проверить, что положение об оплате труда/премировании содержит конкретные критерии выплаты (KPI, формула расчёта, сроки, основания невыплаты)",
+            "Убрать или заменить расплывчатые формулировки вроде «может выплачиваться по усмотрению компании»",
+            "Убедиться, что связка «дисциплинарное взыскание — премия» соответствует правилу «тот же месяц, лимит 20%»",
+            "Если есть система торговых бонусов, отдельно проверить документирование базы расчёта"
+          ],
+          "internalDocs": [
+            "Положение о премировании",
+            "Положение об оплате труда",
+            "Раздел трудового договора об оплате труда"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-003",
+      "category": "급여·보상",
+      "titleKo": "멘토링(наставничество) 유급 의무화",
+      "titleRu": "Наставничество — ст. 351.8 ТК РФ",
+      "status": "시행중",
+      "impact": "Medium",
+      "effectiveDate": "2025-03-01",
+      "background": "신입 교육 담당(멘토) 업무가 무보수 관행이던 것을 법으로 유급화. 노동법전에 351.8조 신설.",
+      "whatChanged": "직원에게 멘토 역할을 맡기려면 ① 본인 서면 동의, ② 근로계약서 또는 추가합의서(допсоглашение/supplementary agreement)에 멘토링 조건 명시, ③ 별도 수당 지급이 모두 필요. 강제 지정 불가.",
+      "penalty": "무보수 멘토링 운영 시 임금 미지급으로 간주될 수 있음 — 소급 지급 + 벌금 리스크.",
+      "hrChecklist": [
+        "신입 온보딩·매장 교육 담당자를 비공식적으로 운영하고 있는지 현황 파악",
+        "멘토 지정 시 допсоглашение 템플릿 준비 (업무 범위·기간·수당 명시)",
+        "멘토 수당 기준을 보수규정에 반영"
+      ],
+      "internalDocs": [
+        "근로계약서/допсоглашение 템플릿",
+        "보수규정"
+      ],
+      "process": "현재 멘토 역할 수행자 리스트업 → 수당 기준 책정(본사 예산 협의) → 개별 합의서 체결",
+      "glossary": [
+        {
+          "term": "допсоглашение",
+          "ko": "근로계약 추가합의서 — 계약 조건 변경 시 필수",
+          "en": "supplementary agreement"
+        }
+      ],
+      "sources": [
+        "https://www.consultant.ru/legalnews/26931/",
+        "https://taxcom.ru/baza-znaniy/kadrovaya-otchetnost/stati/kak-s-1-marta-2025-goda-oformlyat-i-oplachivat-nastavnichestvo/"
+      ],
+      "titleEn": "Mentoring — new Art. 351.8 of the Labor Code",
+      "i18n": {
+        "en": {
+          "background": "Compensating employees who mentor new hires used to be an informal, often unpaid practice. It is now formalized and made mandatory-paid under new Article 351.8 of the Labor Code.",
+          "whatChanged": "Assigning an employee as a mentor now requires all three: ① their written consent, ② mentoring terms specified in the employment contract or a supplementary agreement, and ③ a separate mentoring allowance. Mentors cannot be assigned by force.",
+          "penalty": "Running an unpaid mentoring arrangement can be treated as unpaid wages — carrying the risk of retroactive payment plus fines.",
+          "process": "List everyone currently performing onboarding/in-store training duties → set the allowance level (coordinate budget with headquarters) → sign individual supplementary agreements.",
+          "hrChecklist": [
+            "Check whether new-hire onboarding or in-store training is being run informally by unofficial mentors",
+            "Prepare a supplementary agreement template for mentor assignments (scope, duration, allowance)",
+            "Reflect the mentoring allowance standard in the Pay Regulation"
+          ],
+          "internalDocs": [
+            "Employment contract / supplementary agreement template",
+            "Pay Regulation"
+          ]
+        },
+        "ru": {
+          "background": "Наставничество новых сотрудников ранее было неформальной и часто неоплачиваемой практикой. Теперь оно закреплено и сделано обязательно оплачиваемым согласно новой ст. 351.8 ТК РФ.",
+          "whatChanged": "Назначение сотрудника наставником требует одновременно: ① его письменного согласия, ② указания условий наставничества в трудовом договоре или допсоглашении, ③ выплаты отдельной надбавки. Принудительное назначение наставником недопустимо.",
+          "penalty": "Неоплачиваемое наставничество может быть квалифицировано как невыплата заработной платы — с риском доплаты задним числом и штрафов.",
+          "process": "Составить список сотрудников, фактически выполняющих функции наставника при онбординге/обучении в магазине → определить размер надбавки (согласовать бюджет с головным офисом) → заключить индивидуальные допсоглашения.",
+          "hrChecklist": [
+            "Проверить, ведётся ли онбординг новых сотрудников/обучение в магазине неформальными наставниками",
+            "Подготовить шаблон допсоглашения для назначения наставника (объём работы, срок, надбавка)",
+            "Отразить норматив надбавки за наставничество в Положении об оплате труда"
+          ],
+          "internalDocs": [
+            "Шаблон трудового договора/допсоглашения",
+            "Положение об оплате труда"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-004",
+      "category": "채용·해고",
+      "titleKo": "시험기간(испытательный срок) 금지 대상 확대 — 3세 미만 자녀 둔 여성",
+      "titleRu": "Запрет испытательного срока — 91-ФЗ от 09.04.2026",
+      "status": "시행예정",
+      "impact": "Medium",
+      "effectiveDate": "2026-09-01",
+      "background": "출산·육아 지원 정책의 일환으로 '보호 대상 근로자' 범위를 계속 확대하는 흐름. 노동법전 70조 개정(2026-04-09 연방법 91-ФЗ).",
+      "whatChanged": "시험기간을 설정할 수 없는 대상이 '1.5세 미만 자녀를 둔 여성' → '3세 미만 자녀를 둔 여성'으로 확대. 위반 시 해당 조항 자체가 무효.",
+      "penalty": "시험기간 불합격을 이유로 해고 시 부당해고 — 복직 + 미지급 임금 배상. 계약서에 조항만 넣어도 위반.",
+      "hrChecklist": [
+        "채용 프로세스에서 지원자의 자녀 연령을 '시험기간 설정 가능 여부' 판단에만 사용하도록 절차 정리 (채용 차별로 이어지지 않게 주의)",
+        "근로계약서 템플릿에 시험기간 예외 대상 체크 항목 추가",
+        "9/1 이전 입사자라도 시험기간 진행 중이면 적용 여부 노무 자문 확인"
+      ],
+      "internalDocs": [
+        "근로계약서 템플릿",
+        "채용 절차 가이드"
+      ],
+      "process": "채용 담당자 교육 → 계약서 템플릿 개정 → 9월 이후 신규 채용 건부터 적용",
+      "glossary": [
+        {
+          "term": "испытательный срок",
+          "ko": "시험기간(수습) — 통상 최대 3개월",
+          "en": "probation period"
+        }
+      ],
+      "sources": [
+        "https://s-pro.group/tpost/s5gajamd61-izmeneniya-v-trudovom-kodekse-rf-v-2026"
+      ],
+      "titleEn": "Ban on probation period — Law 91-FZ of Apr 9, 2026",
+      "i18n": {
+        "en": {
+          "background": "Part of an ongoing trend of widening the category of \"protected employees\" as part of family and childcare support policy. Article 70 of the Labor Code was amended (Federal Law No. 91-FZ of Apr 9, 2026).",
+          "whatChanged": "The group for whom a probation period cannot be set has been expanded from \"women with a child under 1.5 years old\" to \"women with a child under 3 years old.\" A violation renders the probation clause itself void.",
+          "penalty": "Dismissing someone for \"failing probation\" when the clause was invalid counts as unlawful dismissal — reinstatement plus back pay. Simply including the clause in the contract is itself a violation.",
+          "process": "Train recruiters → revise the employment contract template → apply to all new hires from September onward.",
+          "hrChecklist": [
+            "In the hiring process, use a candidate's child's age only to determine probation eligibility — never let it factor into the hiring decision itself (to avoid discrimination claims)",
+            "Add a probation-exemption check field to the employment contract template",
+            "For anyone hired before Sept 1 who is still in a probation period, confirm with a labor advisor whether the new rule applies"
+          ],
+          "internalDocs": [
+            "Employment contract template",
+            "Hiring process guide"
+          ]
+        },
+        "ru": {
+          "background": "Продолжение тенденции расширения категории «защищённых работников» в рамках политики поддержки семей с детьми. Внесены изменения в ст. 70 ТК РФ (Федеральный закон № 91-ФЗ от 09.04.2026).",
+          "whatChanged": "Категория, для которой запрещено устанавливать испытательный срок, расширена с «женщин с ребёнком до 1,5 лет» до «женщин с ребёнком до 3 лет». При нарушении условие об испытательном сроке признаётся недействительным.",
+          "penalty": "Увольнение по причине «непрохождения испытания» при недействительном условии квалифицируется как незаконное увольнение — восстановление на работе и выплата за вынужденный прогул. Само включение такого условия в договор уже является нарушением.",
+          "process": "Обучить сотрудников по подбору персонала → пересмотреть шаблон трудового договора → применять ко всем новым сотрудникам начиная с сентября.",
+          "hrChecklist": [
+            "В процессе найма использовать возраст ребёнка кандидата только для определения возможности установления испытательного срока — не допускать влияния на решение о найме (риск дискриминации)",
+            "Добавить в шаблон трудового договора поле для проверки исключения по испытательному сроку",
+            "Для сотрудников, принятых до 1 сентября и всё ещё проходящих испытание, уточнить у юриста применимость новой нормы"
+          ],
+          "internalDocs": [
+            "Шаблон трудового договора",
+            "Руководство по процедуре найма"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-005",
+      "category": "채용·해고",
+      "titleKo": "감원 시 СВО(특별군사작전) 복귀자 우선 잔류권",
+      "titleRu": "Преимущественное право при сокращении — 108-ФЗ от 25.04.2026",
+      "status": "시행예정",
+      "impact": "High",
+      "effectiveDate": "2026-09-01",
+      "background": "군 복무 후 복직한 직원 보호 강화 정책. 노동법전 179조 개정(2026-04-25 연방법 108-ФЗ).",
+      "whatChanged": "인원 감축(сокращение/redundancy) 시 '동원·계약·자원 참전 후 복직한 직원'이 동일 생산성 조건에서 우선 잔류권을 가짐. 기존 우선권 대상(부양가족 다수 등)에 새 카테고리 추가.",
+      "penalty": "우선권 무시하고 감원 시 법원 복직 판결 + 강제휴직 기간 임금 전액 배상. 러시아 법원은 근로자 승소율이 높음.",
+      "hrChecklist": [
+        "인사파일에서 СВО 참전 후 복직자(계약 정지 이력자) 명단 사전 파악",
+        "향후 구조조정 계획 수립 시 우선권 매트릭스에 해당 카테고리 반영",
+        "감원 절차 체크리스트(2개월 전 통지, 대체직 제안 등) 문서화"
+      ],
+      "internalDocs": [
+        "감원 절차 내부 가이드",
+        "인사파일 관리 대장"
+      ],
+      "process": "감원 검토 단계에서 반드시 노무 자문사와 대상자 심사 → 우선권 심사 기록을 서면으로 남김 → 본사 보고 시 법적 리스크 명시",
+      "glossary": [
+        {
+          "term": "сокращение штата",
+          "ko": "인원 감축 — 러시아에서 가장 소송 리스크가 큰 해고 유형. 2개월 전 서면 통지 + 퇴직수당 최대 3개월분",
+          "en": "staff redundancy"
+        }
+      ],
+      "sources": [
+        "https://s-pro.group/tpost/s5gajamd61-izmeneniya-v-trudovom-kodekse-rf-v-2026"
+      ],
+      "titleEn": "Priority retention in redundancy — Law 108-FZ of Apr 25, 2026",
+      "i18n": {
+        "en": {
+          "background": "Policy strengthening protection for employees who return to work after military service. Article 179 of the Labor Code was amended (Federal Law No. 108-FZ of Apr 25, 2026).",
+          "whatChanged": "During staff redundancy, employees who resumed work after having their contract suspended for mobilization, contract service, or volunteering in the special military operation (SVO) now get priority retention when productivity is equal. This adds a new category to the existing priority list (e.g., employees with multiple dependents).",
+          "penalty": "Ignoring this priority right when downsizing risks a court-ordered reinstatement plus full back pay for the forced-leave period. Russian courts rule in the employee's favor at a high rate.",
+          "process": "Always screen candidates for redundancy together with a labor law advisor at the review stage → keep a written record of the priority-right assessment → explicitly flag the legal risk when reporting to headquarters.",
+          "hrChecklist": [
+            "Proactively identify, from HR files, employees who returned to work after SVO participation (contract-suspension history)",
+            "When planning any future restructuring, reflect this new category in the priority-retention matrix",
+            "Document the redundancy procedure checklist (2-month advance notice, alternative position offers, etc.)"
+          ],
+          "internalDocs": [
+            "Internal redundancy procedure guide",
+            "HR file register"
+          ]
+        },
+        "ru": {
+          "background": "Политика усиления защиты работников, возобновивших работу после военной службы. Внесены изменения в ст. 179 ТК РФ (Федеральный закон № 108-ФЗ от 25.04.2026).",
+          "whatChanged": "При сокращении штата работники, возобновившие работу после приостановления трудового договора в связи с мобилизацией, контрактной службой или добровольческим участием в СВО, получают преимущественное право на оставление на работе при равной производительности труда. Это новая категория в дополнение к уже существующим (например, лица с несколькими иждивенцами).",
+          "penalty": "Игнорирование преимущественного права при сокращении влечёт риск восстановления на работе по решению суда и выплаты полного среднего заработка за время вынужденного прогула. Российские суды часто встают на сторону работника.",
+          "process": "На этапе рассмотрения сокращения обязательно проводить проверку кандидатов совместно с юристом по трудовому праву → фиксировать оценку преимущественного права письменно → при докладе головному офису явно указывать юридический риск.",
+          "hrChecklist": [
+            "Заранее выявить в личных делах сотрудников, вернувшихся на работу после участия в СВО (с историей приостановки договора)",
+            "При планировании будущей реструктуризации отразить новую категорию в матрице преимущественного права",
+            "Задокументировать чек-лист процедуры сокращения (уведомление за 2 месяца, предложение других вакансий и т.д.)"
+          ],
+          "internalDocs": [
+            "Внутреннее руководство по процедуре сокращения",
+            "Реестр личных дел сотрудников"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-006",
+      "category": "문서·시스템",
+      "titleKo": "인사 전자문서(КЭДО) 확대 — 국산 메신저 MAX 연동",
+      "titleRu": "Расширение КЭДО, мессенджер MAX",
+      "status": "계류중",
+      "impact": "Medium",
+      "effectiveDate": "2026-09-01(예정)",
+      "background": "노동부(Минтруд/Ministry of Labor)가 인사 문서의 전면 디지털화를 추진. 국가 플랫폼 '일자리 러시아(Работа в России/Rabota v Rossii)' 및 국산 메신저 MAX와 연동하는 개정안 발의.",
+      "whatChanged": "① 원격근무자와 비적격 전자서명(НЭП/NEP)으로 근로계약 체결 허용 확대, ② MAX 메신저를 통한 인사문서 교환 시 단순 전자서명을 자필 서명과 동등 인정(예정), ③ КЭДО/KEDO 도입 절차·직원 동의 규정을 ЛНА/LNA에 상세 규정해야 함.",
+      "penalty": "직접 벌금보다는, 절차(규정·동의) 없이 종이 문서를 없애면 문서 부재로 간주되는 리스크.",
+      "hrChecklist": [
+        "КЭДО 도입 여부 방침 결정 (도입 시 종이·서명 업무 대폭 감소, 특히 원격근무자)",
+        "도입 시: КЭДО 규정(Положение о КЭДО/KEDO Regulation) 제정 + 직원 개별 서면 동의 수집 + 전자서명 제공업체 선정",
+        "본사 보안 정책과 MAX·국가 플랫폼 연동의 충돌 여부 사전 검토 (데이터가 국가 시스템을 경유)"
+      ],
+      "internalDocs": [
+        "КЭДО 규정(신설)",
+        "직원 동의서 양식",
+        "취업규칙(ПВТР/PVTR) 문서 조항"
+      ],
+      "process": "법안 확정 모니터링 → IT·보안팀과 시스템 검토 → 본사 승인 → 규정 제정·동의 수집 → 단계적 전환",
+      "glossary": [
+        {
+          "term": "НЭП",
+          "ko": "비적격 전자서명 — 공인인증서보다 낮은 등급의 전자서명",
+          "en": "non-qualified e-signature"
+        },
+        {
+          "term": "MAX",
+          "ko": "러시아 국산 메신저(VK 개발) — 정부가 공공서비스 채널로 육성 중",
+          "en": "MAX messenger (VK)"
+        }
+      ],
+      "sources": [
+        "https://kontur.ru/articles/4819",
+        "https://s-pro.group/tpost/s5gajamd61-izmeneniya-v-trudovom-kodekse-rf-v-2026"
+      ],
+      "titleEn": "Expansion of HR e-documents (KEDO), MAX messenger",
+      "i18n": {
+        "en": {
+          "background": "The Ministry of Labor is pushing to fully digitize HR documentation, proposing amendments that link it to the state platform \"Rabota v Rossii\" and the domestic messenger app MAX.",
+          "whatChanged": "① Broader ability to sign employment contracts with remote workers using a non-qualified electronic signature (NEP). ② Document exchange via the MAX messenger is set to recognize a simple electronic signature as equivalent to a handwritten one. ③ The procedure for introducing KEDO and obtaining employee consent must be spelled out in detail in an internal regulation (LNA).",
+          "penalty": "Not so much a direct fine — the risk is that eliminating paper documents without proper procedures (regulation + consent) in place can be treated as a missing-documentation violation.",
+          "process": "Monitor the bill until finalized → review the system with IT/security → get headquarters approval → establish the regulation and collect consents → roll out in phases.",
+          "hrChecklist": [
+            "Decide the company's policy on adopting KEDO (adoption sharply cuts paper/signature workload, especially for remote workers)",
+            "If adopting: establish a KEDO Regulation, collect individual written consent from employees, and select an e-signature provider",
+            "Pre-review whether integrating with MAX and the state platform conflicts with headquarters security policy (since data passes through a state system)"
+          ],
+          "internalDocs": [
+            "KEDO Regulation (new)",
+            "Employee consent form",
+            "Internal labor rules (PVTR) document clause"
+          ]
+        },
+        "ru": {
+          "background": "Минтруд продвигает полную цифровизацию кадрового документооборота, предлагая поправки, увязывающие его с государственной платформой «Работа в России» и отечественным мессенджером MAX.",
+          "whatChanged": "① Расширена возможность заключать трудовые договоры с дистанционными работниками с использованием неквалифицированной электронной подписи (НЭП). ② При обмене кадровыми документами через мессенджер MAX простая электронная подпись приравнивается к собственноручной (планируется). ③ Порядок внедрения КЭДО и получения согласия работника должен быть подробно закреплён в ЛНА.",
+          "penalty": "Прямого штрафа немного — риск в том, что отказ от бумажных документов без надлежащих процедур (положение + согласие) может быть расценён как отсутствие необходимой документации.",
+          "process": "Отслеживать окончательное принятие законопроекта → рассмотреть систему совместно с ИТ/безопасностью → получить одобрение головного офиса → утвердить положение и собрать согласия → внедрять поэтапно.",
+          "hrChecklist": [
+            "Определить политику компании по внедрению КЭДО (внедрение резко сокращает бумажный документооборот и подписи, особенно для дистанционных работников)",
+            "При внедрении: утвердить Положение о КЭДО, собрать индивидуальные письменные согласия сотрудников, выбрать провайдера электронной подписи",
+            "Заранее проверить, не конфликтует ли интеграция с MAX и госплатформой с политикой безопасности головного офиса (данные проходят через государственную систему)"
+          ],
+          "internalDocs": [
+            "Положение о КЭДО (новое)",
+            "Форма согласия сотрудника",
+            "Пункт ПВТР о документообороте"
+          ]
+        }
+      },
+      "effectiveDateI18n": {
+        "en": "2026-09-01 (planned)",
+        "ru": "2026-09-01 (планируется)"
+      }
+    },
+    {
+      "id": "LAB-007",
+      "category": "급여·보상",
+      "titleKo": "노동법 위반 벌금 상향 법안 (최대 2배 수준)",
+      "titleRu": "Законопроект № 1188246-8 — повышение штрафов",
+      "status": "계류중",
+      "impact": "Medium",
+      "effectiveDate": "2026년 내 채택 전망",
+      "background": "임금 체불과 산업안전 위반에 대한 제재 강화 목적. 국가두마 심의 중이며 2026년 내 통과 전망.",
+      "whatChanged": "반복 위반 기준 벌금 상향안: 임원·개인사업자 3~4만₽ → 4~5만₽, 법인 10~20만₽ → 15~25만₽. 주요 타깃은 임금 지연 지급과 산업안전(보호구 미지급, 건강검진 미실시).",
+      "penalty": "해당 법안 자체가 벌금 규정.",
+      "hrChecklist": [
+        "급여 지급일 준수 현황 점검 (러시아는 월 2회 지급 의무 — 15일 간격 이내)",
+        "산업안전 서류(안전교육 일지, 근로환경평가 СОУТ/SOUT) 유효기간 확인",
+        "사무직 중심이라도 의무 건강검진 대상 직군(운전 업무 등) 여부 확인"
+      ],
+      "internalDocs": [
+        "급여 지급 일정 규정",
+        "산업안전 관련 대장"
+      ],
+      "process": "법안 통과 시점 모니터링 → 통과 전 내부 감사(급여·안전 서류) 선제 실시",
+      "glossary": [
+        {
+          "term": "СОУТ",
+          "ko": "근로환경 특별평가 — 5년마다 전 사업장 의무",
+          "en": "special assessment of working conditions"
+        }
+      ],
+      "sources": [
+        "https://s-pro.group/tpost/s5gajamd61-izmeneniya-v-trudovom-kodekse-rf-v-2026"
+      ],
+      "titleEn": "Draft law No. 1188246-8 — increase of fines",
+      "i18n": {
+        "en": {
+          "background": "Aimed at tightening sanctions for wage arrears and workplace-safety violations. Under review in the State Duma, expected to pass within 2026.",
+          "whatChanged": "Proposed fine increase for repeat violations: executives/sole proprietors from RUB 30-40K to RUB 40-50K; companies from RUB 100-200K to RUB 150-250K. Main targets are delayed wage payment and workplace safety (missing PPE, skipped medical exams).",
+          "penalty": "The bill itself is the fine schedule.",
+          "process": "Monitor when the bill passes → proactively run an internal audit (payroll and safety documentation) before it takes effect.",
+          "hrChecklist": [
+            "Check compliance with pay-date rules (Russia requires payment twice a month, no more than 15 days apart)",
+            "Confirm workplace-safety documents (safety briefing logs, SOUT working-condition assessment) are up to date",
+            "Even for office-heavy workforces, check whether any role (e.g., drivers) is subject to mandatory medical exams"
+          ],
+          "internalDocs": [
+            "Payroll payment schedule regulation",
+            "Workplace safety register"
+          ]
+        },
+        "ru": {
+          "background": "Цель — усилить санкции за задержку зарплаты и нарушения охраны труда. Законопроект рассматривается Госдумой, ожидается принятие в течение 2026 года.",
+          "whatChanged": "Предлагается повышение штрафов за повторные нарушения: для должностных лиц/ИП — с 30-40 тыс. ₽ до 40-50 тыс. ₽; для юрлиц — со 100-200 тыс. ₽ до 150-250 тыс. ₽. Основные цели — задержка зарплаты и нарушения охраны труда (отсутствие СИЗ, непроведение медосмотров).",
+          "penalty": "Сам законопроект и есть перечень штрафов.",
+          "process": "Отслеживать момент принятия законопроекта → заранее провести внутренний аудит (зарплатные ведомости и документация по охране труда) до вступления в силу.",
+          "hrChecklist": [
+            "Проверить соблюдение сроков выплаты зарплаты (в РФ обязательна выплата 2 раза в месяц с интервалом не более 15 дней)",
+            "Убедиться в актуальности документов по охране труда (журналы инструктажей, оценка условий труда СОУТ)",
+            "Даже при преимущественно офисном штате проверить, есть ли должности (например, водители), подлежащие обязательным медосмотрам"
+          ],
+          "internalDocs": [
+            "Положение о графике выплаты зарплаты",
+            "Реестр документов по охране труда"
+          ]
+        }
+      },
+      "effectiveDateI18n": {
+        "en": "Expected to pass within 2026",
+        "ru": "Ожидается принятие в течение 2026 года"
+      }
+    },
+    {
+      "id": "LAB-008",
+      "category": "채용·해고",
+      "titleKo": "노동법전 대개편 법안 — 초과근무·기간제 계약 유연화",
+      "titleRu": "Законопроект № 1103297-8 — реформа ТК",
+      "status": "계류중",
+      "impact": "Medium",
+      "effectiveDate": "2026-09-01 이후(미정)",
+      "background": "인력난 대응을 위한 노동시장 유연화 패키지. 1독회 통과 상태로 세부 내용은 변동 가능.",
+      "whatChanged": "예고된 방향: ① 초과근무(сверхурочная работа/overtime work) 연간 한도 확대 및 절차 간소화, ② 연금수급자·프로젝트 업무에 대한 기간제 계약(срочный договор/fixed-term contract) 체결 요건 완화, ③ 업무상 필요시 휴가 중 소환(отзыв из отпуска/vacation recall) 절차 명확화 + 금전 보상 의무.",
+      "penalty": "통과 전이므로 해당 없음. 통과 시 기존 초과근무 운영 방식 재정비 필요.",
+      "hrChecklist": [
+        "현재 초과근무 발생 패턴(성수기 프로모션·재고조사 등) 파악해두기 — 법 통과 시 활용 여지 커짐",
+        "기간제 계약 활용 가능 직무(프로젝트성 테스트 인력 등) 목록 미리 검토",
+        "2·3독회 통과 여부 분기별 모니터링"
+      ],
+      "internalDocs": [
+        "취업규칙(근로시간 조항)",
+        "기간제 계약 템플릿"
+      ],
+      "process": "법안 확정 전 액션 불필요 — 확정 시 노무 자문 받아 취업규칙 개정",
+      "glossary": [
+        {
+          "term": "срочный трудовой договор",
+          "ko": "기간제 근로계약 — 러시아는 사유 제한 열거주의라 체결 요건이 엄격",
+          "en": "fixed-term employment contract"
+        }
+      ],
+      "sources": [
+        "https://s-pro.group/tpost/s5gajamd61-izmeneniya-v-trudovom-kodekse-rf-v-2026"
+      ],
+      "titleEn": "Draft law No. 1103297-8 — Labor Code reform",
+      "i18n": {
+        "en": {
+          "background": "A labor-market flexibility package aimed at addressing labor shortages. Passed its first reading; details may still change.",
+          "whatChanged": "Announced direction: ① expanding the annual overtime limit and simplifying its procedure, ② easing requirements for fixed-term contracts with pensioners and project-based work, ③ clarifying the procedure for recalling employees from vacation for business necessity, with mandatory monetary compensation.",
+          "penalty": "Not applicable yet since the bill hasn't passed. If passed, existing overtime practices will need to be reorganized.",
+          "process": "No action needed before the bill is finalized — once finalized, revise internal labor rules with the help of a labor advisor.",
+          "hrChecklist": [
+            "Start tracking current overtime patterns (peak-season promotions, stocktaking, etc.) — will be more usable once the law passes",
+            "Pre-review which roles (e.g., project-based test staff) could use fixed-term contracts",
+            "Monitor quarterly whether the bill passes its 2nd/3rd reading"
+          ],
+          "internalDocs": [
+            "Internal labor rules (working-hours clause)",
+            "Fixed-term contract template"
+          ]
+        },
+        "ru": {
+          "background": "Пакет мер по повышению гибкости рынка труда для решения проблемы нехватки кадров. Принят в первом чтении, детали могут измениться.",
+          "whatChanged": "Анонсированное направление: ① расширение годового лимита сверхурочной работы и упрощение процедуры её оформления, ② смягчение требований к срочным договорам с пенсионерами и на проектную работу, ③ уточнение процедуры отзыва работника из отпуска по производственной необходимости с обязательной денежной компенсацией.",
+          "penalty": "Пока не применимо, так как законопроект не принят. При принятии потребуется пересмотр действующей практики привлечения к сверхурочной работе.",
+          "process": "До окончательного принятия законопроекта действия не требуются — после принятия пересмотреть ПВТР при содействии юриста по трудовому праву.",
+          "hrChecklist": [
+            "Начать фиксировать текущие паттерны сверхурочной работы (промоакции в пиковый сезон, инвентаризация и т.д.) — пригодится после принятия закона",
+            "Заранее рассмотреть, для каких должностей (например, проектный тестовый персонал) можно использовать срочные договоры",
+            "Ежеквартально отслеживать прохождение 2 и 3 чтения законопроекта"
+          ],
+          "internalDocs": [
+            "ПВТР (раздел о рабочем времени)",
+            "Шаблон срочного трудового договора"
+          ]
+        }
+      },
+      "effectiveDateI18n": {
+        "en": "On or after 2026-09-01 (TBD)",
+        "ru": "После 2026-09-01 (точная дата не определена)"
+      }
+    },
+    {
+      "id": "LAB-009",
+      "category": "급여·보상",
+      "titleKo": "임금 인덱세이션(물가연동 인상) 의무화 법안",
+      "titleRu": "Обязательная индексация зарплат — поправка в ст. 134 ТК",
+      "status": "논의중",
+      "impact": "High",
+      "effectiveDate": "미정 (2026년 발의)",
+      "background": "현행법도 민간기업에 인덱세이션 의무를 부과하지만 주기·비율이 불명확해 사실상 형해화. 초당파 의원 그룹(노동위원장 Я. Нилов/Ya. Nilov 주도)이 '연 1회 이상, 전년도 인플레이션 이상' 의무화 개정안 추진.",
+      "whatChanged": "통과 시: 최소 연 1회, 전년 물가상승률 이상의 급여 인상이 법적 의무가 됨. 일회성 보너스나 지원금으로 대체 불가 명시.",
+      "penalty": "통과 시 미이행은 임금 관련 위반으로 벌금 + 소급 청구 리스크. 현재도 인덱세이션 규정 부재는 ГИТ/GIT 지적 사항.",
+      "hrChecklist": [
+        "현재 ЛНА/LNA에 인덱세이션 조항이 있는지 확인 — 없으면 지금도 리스크이므로 우선 신설 권고",
+        "본사 인건비 계획에 '러시아 인플레율 연동 인상' 시나리오 반영 (러시아 인플레이션 감안 시 재무 영향 큼)",
+        "법안 진행 상황 분기별 모니터링"
+      ],
+      "internalDocs": [
+        "보수규정(인덱세이션 조항)",
+        "단체협약(있는 경우)"
+      ],
+      "process": "노무 자문사에 현행 인덱세이션 조항 적정성 검토 의뢰 → 본사에 인건비 시나리오 보고 → 법안 통과 시 즉시 규정 개정",
+      "glossary": [
+        {
+          "term": "индексация зарплат",
+          "ko": "물가연동 임금 인상 — 러시아 노동법 특유의 개념",
+          "en": "wage indexation"
+        }
+      ],
+      "sources": [
+        "https://www.kommersant.ru/doc/8340077",
+        "https://www.glavbukh.ru/art/392502-indeksirovat-zarplaty-new"
+      ],
+      "titleEn": "Mandatory wage indexation — amendment to Art. 134 of the Labor Code",
+      "i18n": {
+        "en": {
+          "background": "Current law already requires private companies to index wages, but with no clear frequency or rate it is effectively toothless. A cross-party group of Duma deputies (led by Labor Committee chair Ya. Nilov) is pushing an amendment mandating indexation \"at least once a year, at or above the prior year's inflation rate.\"",
+          "whatChanged": "If passed: a wage increase of at least once a year, at or above the prior year's inflation rate, becomes a legal obligation. It explicitly cannot be substituted with a one-time bonus or allowance.",
+          "penalty": "If passed, non-compliance becomes a wage-related violation carrying fines plus retroactive claims. Even now, the absence of an indexation clause is something GIT flags.",
+          "process": "Have a labor advisor review the adequacy of the current indexation clause → report payroll-cost scenarios to headquarters → amend the regulation immediately if the bill passes.",
+          "hrChecklist": [
+            "Check whether the current internal regulation (LNA) has an indexation clause at all — if not, this is already a risk today and should be added as a priority",
+            "Reflect a \"raise linked to Russian inflation\" scenario in the headquarters payroll-cost plan (the financial impact can be significant given Russian inflation)",
+            "Monitor the bill's progress quarterly"
+          ],
+          "internalDocs": [
+            "Pay Regulation (indexation clause)",
+            "Collective agreement (if any)"
+          ]
+        },
+        "ru": {
+          "background": "Действующий закон уже обязывает частные компании индексировать зарплату, но из-за отсутствия чёткой периодичности и размера норма фактически не работает. Межфракционная группа депутатов Госдумы (во главе с председателем Комитета по труду Я. Ниловым) продвигает поправку, устанавливающую индексацию «не реже одного раза в год не ниже уровня инфляции за предыдущий год».",
+          "whatChanged": "В случае принятия: повышение зарплаты не реже одного раза в год не ниже уровня инфляции предыдущего года станет законодательно обязательным. Прямо указано, что замена разовой премией или материальной помощью недопустима.",
+          "penalty": "В случае принятия невыполнение станет нарушением, связанным с оплатой труда, с риском штрафов и требований о доплате задним числом. Уже сейчас отсутствие пункта об индексации — предмет замечаний ГИТ.",
+          "process": "Запросить у юриста по трудовому праву оценку адекватности действующего пункта об индексации → доложить головному офису сценарии влияния на ФОТ → незамедлительно скорректировать положение в случае принятия закона.",
+          "hrChecklist": [
+            "Проверить, есть ли вообще пункт об индексации в действующем ЛНА — если нет, это уже риск сейчас и требует приоритетного добавления",
+            "Отразить в плане ФОТ головного офиса сценарий «повышение с учётом российской инфляции» (финансовое влияние может быть значительным)",
+            "Ежеквартально отслеживать ход рассмотрения законопроекта"
+          ],
+          "internalDocs": [
+            "Положение об оплате труда (пункт об индексации)",
+            "Коллективный договор (при наличии)"
+          ]
+        }
+      },
+      "effectiveDateI18n": {
+        "en": "TBD (bill expected in 2026)",
+        "ru": "Не определено (законопроект ожидается в 2026 году)"
+      }
+    },
+    {
+      "id": "LAB-010",
+      "category": "외국인·주재원",
+      "titleKo": "외국인 직원 해고 사유 확대 — 지역별 고용 제한 반영",
+      "titleRu": "419-ФЗ от 17.11.2025 — поправка в ст. 327.6 ТК",
+      "status": "시행중",
+      "impact": "Medium",
+      "effectiveDate": "2026-03-02",
+      "background": "각 지역(субъект РФ/region of RF)이 특정 업종의 외국인 고용을 금지·제한하는 조례를 내는 사례가 급증(소매·운수·요식 등). 기존 노동법전에는 '연방' 제한만 해고 사유였고 지역 제한은 근거가 없던 공백을 메움.",
+      "whatChanged": "지역 정부의 외국인 고용 제한 조례도 외국인 근로계약 해지의 법적 근거가 됨. 소매판매 직종은 여러 지역에서 외국인 고용 금지 대상이 되는 추세라 유통·판매 법인에 직접 영향 가능.",
+      "penalty": "지역 제한 초과 고용 시 КоАП/Admin. Offenses Code 18.15조 — 법인 벌금 건당 최대 80만~100만₽(지역별 상이) + 활동정지 리스크.",
+      "hrChecklist": [
+        "모스크바 및 사업 지역의 외국인 고용 제한 업종 목록 확인 (매년 갱신됨)",
+        "고용 중인 CIS 국적 직원(판매·물류 등)의 직종 코드가 제한 대상인지 점검",
+        "제한 대상 발견 시 직무 전환 또는 적법 해지 절차를 노무 자문과 진행 (일방 해고 아닌 법정 절차 준수)"
+      ],
+      "internalDocs": [
+        "외국인 직원 명부",
+        "직제표(직종 코드)"
+      ],
+      "process": "매년 12월 지역 조례 발표 시점에 제한 목록 점검 → 해당자 있으면 2개월 내 조치 계획 수립 → 본사 보고",
+      "glossary": [
+        {
+          "term": "субъект РФ",
+          "ko": "러시아 연방주체(지역) — 주지사령으로 외국인 고용 제한 가능",
+          "en": "federal subject (region)"
+        }
+      ],
+      "sources": [
+        "https://easydocs.ru/journal/pravo/izmeneniya_v_rabote_s_inostrannymi_grazhdanami_v_2026"
+      ],
+      "titleEn": "Law 419-FZ of Nov 17, 2025 — amendment to Art. 327.6 (foreign staff dismissal)",
+      "i18n": {
+        "en": {
+          "background": "A growing number of Russian regions are issuing decrees banning or restricting foreign employment in specific industries (retail, transport, food service, etc.). Previously the Labor Code only recognized federal-level restrictions as dismissal grounds, leaving no basis for regional restrictions — this closes that gap.",
+          "whatChanged": "Regional government decrees restricting foreign employment are now a valid legal basis for terminating a foreign employee's contract. Retail sales roles are increasingly targeted for foreign-employment bans in multiple regions, which can directly affect distribution/retail companies.",
+          "penalty": "Exceeding regional restrictions triggers Administrative Offenses Code Art. 18.15 — a company fine of up to RUB 800K-1M per case (varies by region) plus risk of business suspension.",
+          "process": "Check the restricted-industry list when regional decrees are published each December → if affected employees are found, develop an action plan within 2 months → report to headquarters.",
+          "hrChecklist": [
+            "Check the list of industries restricted for foreign employment in Moscow and other operating regions (updated annually)",
+            "Check whether the job codes of employed CIS-national staff (sales, logistics, etc.) fall under a restriction",
+            "If a restricted role is found, work with a labor advisor on a role transfer or lawful termination process (not a unilateral dismissal — follow statutory procedure)"
+          ],
+          "internalDocs": [
+            "Foreign employee register",
+            "Staffing table (job codes)"
+          ]
+        },
+        "ru": {
+          "background": "Всё больше регионов РФ вводят постановления, запрещающие или ограничивающие привлечение иностранных работников в отдельных отраслях (розница, транспорт, общепит и др.). Ранее ТК РФ признавал основанием для увольнения только федеральные ограничения, для региональных оснований не было — этот пробел устранён.",
+          "whatChanged": "Постановления региональных властей об ограничении привлечения иностранной рабочей силы теперь являются законным основанием для расторжения трудового договора с иностранным работником. Розничные продажи всё чаще подпадают под запрет на иностранных работников в разных регионах, что может напрямую затронуть компании из сферы дистрибуции и розницы.",
+          "penalty": "Превышение региональных ограничений влечёт ответственность по ст. 18.15 КоАП РФ — штраф для юрлица до 800 тыс.-1 млн ₽ за случай (зависит от региона) и риск приостановки деятельности.",
+          "process": "Проверять список ограниченных отраслей при публикации региональных постановлений (обычно в декабре) → при выявлении затронутых сотрудников разработать план действий в течение 2 месяцев → доложить головному офису.",
+          "hrChecklist": [
+            "Проверить перечень отраслей, ограниченных для иностранных работников в Москве и других регионах присутствия (обновляется ежегодно)",
+            "Проверить, подпадают ли должностные коды работающих сотрудников из стран СНГ (продажи, логистика и т.д.) под ограничение",
+            "При обнаружении ограниченной должности провести с юристом процедуру перевода или законного расторжения договора (не одностороннее увольнение, а установленная законом процедура)"
+          ],
+          "internalDocs": [
+            "Реестр иностранных сотрудников",
+            "Штатное расписание (коды должностей)"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-011",
+      "category": "외국인·주재원",
+      "titleKo": "2026년 외국인 고용 요건 — 쿼터 확대·ВКС(주재원) 요건 유지",
+      "titleRu": "Квота на 2026 (ПП № 1920), ВКС 750 тыс ₽/квартал",
+      "status": "시행중",
+      "impact": "High",
+      "effectiveDate": "2026-01-01",
+      "background": "비자 발급 대상 외국인 노동자 쿼터가 2026년 278,940명으로 18.7% 확대(2025-11-28 정부령 1920호). 한국인 주재원은 통상 쿼터 면제인 ВКС/VKS/HQS 제도로 근무.",
+      "whatChanged": "① 비자 쿼터 확대 (단, 한국인 주재원은 ВКС라 직접 영향 적음), ② ВКС 급여 요건: 분기당 75만 루블 이상 유지 필수, ③ 모든 외국인 직원 SNILS(사회보험번호) 의무, ④ 외국인 채용·건강검진·등록 관련 요건 지속 강화 추세.",
+      "penalty": "ВКС 급여 요건 미달 분기 발생 시 워크퍼밋 취소 사유 + 향후 ВКС 채용 자격 제한(2년). 통지 의무(분기 급여 보고) 미이행 시 법인 벌금 최대 100만₽.",
+      "hrChecklist": [
+        "주재원 전원의 분기별 급여가 75만₽ 이상인지 확인 — 환율 변동·무급휴가 시 미달 위험 주의",
+        "ВКС 분기 급여 보고(МВД 제출)가 기한 내 이뤄지는지 확인 (분기 종료 후 익월 말일까지)",
+        "주재원 교체 시 워크퍼밋·비자·입국 등록·SNILS 일정을 역산한 체크리스트 운영",
+        "가족 동반 비자·MVD 등록(도착 통지) 갱신 일정 관리"
+      ],
+      "internalDocs": [
+        "주재원 관리 대장",
+        "ВКС 분기 보고 일정표"
+      ],
+      "process": "분기 마감 전 급여 요건 확인(회계법인) → МВД/MVD 보고 → 미달 위험 시 본사와 급여 조정 협의",
+      "glossary": [
+        {
+          "term": "SNILS",
+          "ko": "사회보험 개인번호 — 외국인 포함 전 직원 필수",
+          "en": "social insurance number"
+        },
+        {
+          "term": "МВД",
+          "ko": "내무부 — 이주 관리 담당 기관",
+          "en": "MVD — Ministry of Internal Affairs"
+        }
+      ],
+      "sources": [
+        "https://easydocs.ru/journal/pravo/izmeneniya_v_rabote_s_inostrannymi_grazhdanami_v_2026",
+        "https://www.gazeta-unp.ru/articles/53099-priem-inostrannyh-grajdan-na-rabotu-instruktsiya"
+      ],
+      "titleEn": "2026 work-visa quota (Gov. Decree No. 1920), HQS salary RUB 750k/quarter",
+      "i18n": {
+        "en": {
+          "background": "The visa-based foreign worker quota for 2026 was expanded 18.7% to 278,940 people (Government Decree No. 1920 of Nov 28, 2025). Korean expatriates typically work under the VKS (HQS) scheme, which is quota-exempt.",
+          "whatChanged": "① The visa quota was expanded (though this has little direct effect on Korean expatriates since VKS is quota-exempt). ② VKS salary requirement: must maintain at least RUB 750,000 per quarter. ③ SNILS (social insurance number) is now mandatory for all foreign employees. ④ Requirements around foreign hiring, medical exams, and registration continue to tighten.",
+          "penalty": "Falling short of the VKS salary requirement in any quarter is grounds for work-permit revocation plus a 2-year restriction on future VKS hiring eligibility. Failing to submit the mandatory quarterly salary report can result in a company fine of up to RUB 1 million.",
+          "process": "Verify the salary requirement before quarter-end (with your accounting firm) → report to the MVD → if there is a shortfall risk, discuss a salary adjustment with headquarters.",
+          "hrChecklist": [
+            "Confirm every expatriate's quarterly salary is at least RUB 750,000 — watch for shortfall risk from exchange-rate swings or unpaid leave",
+            "Confirm the mandatory quarterly VKS salary report (submitted to the MVD) is filed on time (by the end of the month following quarter-end)",
+            "Run a reverse-scheduled checklist for work permit / visa / entry registration / SNILS whenever rotating an expatriate",
+            "Manage the renewal schedule for family-accompanying visas and MVD registration (arrival notification)"
+          ],
+          "internalDocs": [
+            "Expatriate management register",
+            "VKS quarterly reporting schedule"
+          ]
+        },
+        "ru": {
+          "background": "Квота на привлечение иностранных работников по визе на 2026 год увеличена на 18,7% до 278 940 человек (Постановление Правительства № 1920 от 28.11.2025). Корейские командированные сотрудники обычно работают по статусу ВКС, который не подпадает под квоту.",
+          "whatChanged": "① Расширена визовая квота (хотя это мало влияет напрямую на корейских командированных, так как ВКС не подпадает под квоту). ② Требование к зарплате ВКС: не менее 750 000 ₽ в квартал. ③ SNILS обязателен теперь для всех иностранных работников. ④ Требования к найму иностранцев, медосмотрам и регистрации продолжают ужесточаться.",
+          "penalty": "Несоблюдение требования к зарплате ВКС хотя бы в одном квартале — основание для аннулирования разрешения на работу и ограничения права найма ВКС на 2 года. Непредставление обязательного квартального отчёта о зарплате — штраф для юрлица до 1 млн ₽.",
+          "process": "Перед окончанием квартала проверить соблюдение требования к зарплате (совместно с бухгалтерией) → подать отчёт в МВД → при риске недостижения обсудить корректировку зарплаты с головным офисом.",
+          "hrChecklist": [
+            "Убедиться, что квартальная зарплата каждого командированного сотрудника не менее 750 000 ₽ — учитывать риск недостижения из-за курсовых колебаний или неоплачиваемого отпуска",
+            "Проверить своевременность подачи обязательного квартального отчёта о зарплате ВКС в МВД (до конца месяца, следующего за кварталом)",
+            "При ротации командированного сотрудника вести чек-лист с обратным отсчётом сроков (разрешение на работу, виза, регистрация по прибытии, SNILS)",
+            "Управлять графиком продления сопровождающих виз членов семьи и регистрации в МВД (уведомление о прибытии)"
+          ],
+          "internalDocs": [
+            "Реестр учёта командированных сотрудников",
+            "График квартальной отчётности ВКС"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-012",
+      "category": "외국인·주재원",
+      "titleKo": "불법체류자 통제 레지스트리(РКЛ)·추방 레짐 — 채용 전 확인 의무화",
+      "titleRu": "Реестр контролируемых лиц, режим высылки",
+      "status": "시행중",
+      "impact": "Medium",
+      "effectiveDate": "2025-02-05",
+      "background": "이주 통제 강화 정책. 불법체류 상태의 외국인을 МВД/MVD 공개 데이터베이스(레지스트리)에 등재하고, 등재자는 은행 거래 제한(월 3만₽)·창업 금지 등 권리가 제한되는 '추방 레짐' 적용.",
+      "whatChanged": "고용주는 외국인과 근로계약 체결 전 РКЛ/RKL 등재 여부를 확인할 수 있고, 실무상 확인이 사실상 필수 절차가 됨(등재자 고용 시 불법고용 책임). 데이터는 4시간마다 갱신.",
+      "penalty": "레지스트리 등재자(불법체류자) 고용 시 КоАП/Admin. Offenses Code 18.15조 불법고용 — 법인 벌금 건당 25만~80만₽(모스크바 최대 100만₽).",
+      "hrChecklist": [
+        "외국인 채용 절차에 'РКЛ 조회 → 결과 스크린샷 보관' 단계 공식 추가",
+        "재직 중인 외국인 직원도 분기 1회 정기 조회 (체류 자격 상실 시 자동 등재됨)",
+        "조회 기록을 인사파일에 보관해 실사(проверка/inspection) 대비"
+      ],
+      "internalDocs": [
+        "외국인 채용 체크리스트",
+        "인사파일"
+      ],
+      "process": "채용 전 МВД 사이트에서 조회 → 등재자면 채용 불가 → 재직자 등재 발견 시 즉시 노무 자문 협의(해지 절차)",
+      "glossary": [
+        {
+          "term": "РКЛ",
+          "ko": "통제대상자 레지스트리(Реестр контролируемых лиц) — МВД 공개 DB",
+          "en": "RKL — Registry of Controlled Persons"
+        }
+      ],
+      "sources": [
+        "https://all-migration.com/journal/migratsionnye-novosti-izmeneniya-v-zakonodatelstve-i-ne-tolko/rezhim-vysylki-i-reestr-kontroliruemykh-lits-kakie-posledstviya-dlya-inostrannykh-rabotnikov-i-rabot/",
+        "https://www.finkont.ru/blog/reestr-kontroliruemykh-lits-dlya-inostrantsev-chto-vazhno-znat-rabotodatelyu-i-sotrudnikam/"
+      ],
+      "titleEn": "Registry of Controlled Persons (RKL), expulsion regime",
+      "i18n": {
+        "en": {
+          "background": "Part of tightened migration control. Foreign nationals staying illegally are entered in a public MVD database (registry); those listed fall under an \"expulsion regime\" restricting rights such as banking transactions (capped at RUB 30K/month) and starting a business.",
+          "whatChanged": "Employers can check RKL status before signing an employment contract with a foreign national, and in practice this check has become essentially mandatory (hiring a listed person creates illegal-employment liability). Data is refreshed every 4 hours.",
+          "penalty": "Employing someone listed in the registry (an illegal resident) triggers Administrative Offenses Code Art. 18.15 for illegal employment — a company fine of RUB 250K-800K per case (up to RUB 1M in Moscow).",
+          "process": "Check the MVD website before hiring → cannot hire if listed → if a current employee is found listed, consult a labor advisor immediately on termination procedure.",
+          "hrChecklist": [
+            "Formally add an \"RKL check → keep a screenshot of the result\" step to the foreign-hiring process",
+            "Run a quarterly recheck on current foreign employees too (status changes can trigger automatic listing)",
+            "Keep the check records in the HR file to prepare for inspections"
+          ],
+          "internalDocs": [
+            "Foreign-hiring checklist",
+            "HR file"
+          ]
+        },
+        "ru": {
+          "background": "Часть политики ужесточения миграционного контроля. Иностранцы, находящиеся в стране незаконно, вносятся в публичную базу данных МВД (реестр); для внесённых в реестр действует «режим высылки», ограничивающий права — банковские операции (не более 30 тыс. ₽/мес), запрет на создание бизнеса и др.",
+          "whatChanged": "Работодатель может проверить статус в РКЛ до заключения трудового договора с иностранцем, и на практике эта проверка стала фактически обязательной (найм внесённого в реестр лица влечёт ответственность за незаконное привлечение к труду). Данные обновляются каждые 4 часа.",
+          "penalty": "Найм лица, внесённого в реестр (незаконно находящегося в стране), влечёт ответственность по ст. 18.15 КоАП РФ за незаконное привлечение к трудовой деятельности — штраф для юрлица 250 тыс.-800 тыс. ₽ за случай (в Москве до 1 млн ₽).",
+          "process": "Перед наймом проверить на сайте МВД → при наличии в реестре найм невозможен → при обнаружении действующего сотрудника в реестре немедленно проконсультироваться с юристом по процедуре расторжения.",
+          "hrChecklist": [
+            "Официально добавить в процесс найма иностранцев шаг «проверка РКЛ → сохранение скриншота результата»",
+            "Проводить ежеквартальную повторную проверку и для действующих иностранных сотрудников (при утрате статуса возможно автоматическое внесение в реестр)",
+            "Хранить записи проверок в личном деле для готовности к проверкам"
+          ],
+          "internalDocs": [
+            "Чек-лист найма иностранных сотрудников",
+            "Личное дело сотрудника"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-013",
+      "category": "병역·군동원",
+      "titleKo": "병역 등록(воинский учёт) 의무 — 전자 레지스트리·벌금 최대 50만₽",
+      "titleRu": "Воинский учёт, электронный реестр повесток",
+      "status": "시행중",
+      "impact": "High",
+      "effectiveDate": "시행중 (통제 강화 지속)",
+      "background": "모든 러시아 법인은 병역 대상 직원(18~30세 남성, 예비역, 군사특기 보유 여성 등)의 명부를 관리하고 군사위원회(военкомат/voenkomat)에 보고할 의무가 있음. 전자 소환장 레지스트리 가동 이후 военкомат·검찰·노동감독의 교차 점검이 일상화되고 벌금이 대폭 상향됨. 외국인 직원은 대상 아님.",
+      "whatChanged": "① 소환장(повестка/summons)이 전자 레지스트리 등재만으로 송달 간주, ② 고용주는 병역 대상자의 채용·퇴직·정보 변경을 военкомат에 통보하고, 소환장 전달·출석 보장 의무, ③ 미이행 벌금: 담당자 4만~8만₽, 법인 최대 35만~50만₽ (출석 통지 미이행 등), ④ 500인 이상 사업장은 매년, 그 외는 3년마다 정기 점검.",
+      "penalty": "법인 벌금 최대 50만₽ + 담당자 개인 벌금. 여러 기관이 중복 부과 가능.",
+      "hrChecklist": [
+        "병역 등록 담당자 지정 приказ/prikaz/order 존재 여부 확인 (러시아인 인사 담당자 지정 권장)",
+        "병역 대상 직원 카드(форма 18/Form 18) 전수 작성·최신화",
+        "채용·퇴직 시 военкомат 통보 프로세스(기한 5일)가 실제로 돌아가는지 점검",
+        "법인 소재지 военкомат 등록 여부 확인 (미등록 법인 많음 — 대표적 적발 사유)",
+        "동원 관련 상황 변화 시 즉시 본사 보고 라인 유지"
+      ],
+      "internalDocs": [
+        "병역 등록 담당자 지정 приказ",
+        "форма 18 카드",
+        "военкомат 서신 대장",
+        "연간 계획서"
+      ],
+      "process": "현황 감사(등록·카드·통보 이력) → 미비점 보완 → 담당자 교육 → 분기별 자체 점검. 민감 사안(동원 등)은 한국 본사 법무와 사전 협의된 대응 원칙 유지",
+      "glossary": [
+        {
+          "term": "военкомат",
+          "ko": "군사위원회 — 한국 병무청 지역사무소에 해당",
+          "en": "voenkomat — military commissariat"
+        },
+        {
+          "term": "повестка",
+          "ko": "소환장 — 전자 등재만으로 송달 효력 발생",
+          "en": "povestka — summons"
+        }
+      ],
+      "sources": [
+        "https://mos.legal/2026/02/15/voinskij-uchet-v-organizaczii-v-2026-godu-obyazannosti-rabotodatelya/",
+        "https://www.kdelo.ru/art/386555-shtrafy-za-voinskiy-uchet"
+      ],
+      "titleEn": "Military registration, electronic summons registry",
+      "i18n": {
+        "en": {
+          "background": "Every Russian legal entity must maintain a roster of employees subject to military registration (men 18-30, reservists, women with a military specialty, etc.) and report to the local military commissariat (voenkomat). Since the electronic summons registry went live, cross-checks between the voenkomat, prosecutor's office, and labor inspectorate have become routine and fines have risen sharply. Foreign employees are not covered.",
+          "whatChanged": "① A summons is now considered delivered simply by being entered in the electronic registry. ② Employers must notify the voenkomat of hiring, termination, and information changes for registrants, and must ensure summonses are delivered and attendance is guaranteed. ③ Fines for non-compliance: RUB 40K-80K for the responsible individual, up to RUB 350K-500K for the company. ④ Companies with 500+ employees are inspected annually; others every 3 years.",
+          "penalty": "Company fines up to RUB 500,000 plus a separate personal fine for the responsible officer. Multiple agencies can impose overlapping fines.",
+          "process": "Audit current status (registration, cards, notification history) → fix gaps → train the responsible person → self-check quarterly. For sensitive matters (mobilization, etc.), maintain a pre-agreed response protocol coordinated with Korean HQ legal.",
+          "hrChecklist": [
+            "Confirm an order formally appointing a military-registration officer exists (recommend appointing a Russian-national HR staff member)",
+            "Ensure Form 18 cards are fully completed and up to date for every registration-eligible employee",
+            "Verify the hiring/termination notification process to the voenkomat (5-day deadline) is actually being followed",
+            "Confirm the company is registered with the voenkomat covering its registered address (many companies are found not to be — a common inspection finding)",
+            "Maintain an immediate escalation line to Korean HQ for any change in mobilization-related circumstances"
+          ],
+          "internalDocs": [
+            "Order appointing the military-registration officer",
+            "Form 18 cards",
+            "Voenkomat correspondence register",
+            "Annual plan document"
+          ]
+        },
+        "ru": {
+          "background": "Каждое юрлицо в России обязано вести учёт военнообязанных сотрудников (мужчины 18-30 лет, запасники, женщины с военно-учётной специальностью и др.) и отчитываться перед военкоматом. С запуском электронного реестра повесток перекрёстные проверки военкомата, прокуратуры и трудовой инспекции стали регулярными, а штрафы значительно выросли. Иностранные сотрудники учёту не подлежат.",
+          "whatChanged": "① Повестка теперь считается врученной с момента внесения в электронный реестр. ② Работодатель обязан уведомлять военкомат о приёме, увольнении и изменении данных военнообязанных, а также обеспечивать вручение повесток и явку. ③ Штрафы за неисполнение: 40-80 тыс. ₽ для ответственного лица, до 350-500 тыс. ₽ для юрлица. ④ Компании со штатом от 500 человек проверяются ежегодно, остальные — раз в 3 года.",
+          "penalty": "Штраф для юрлица до 500 000 ₽ плюс отдельный штраф для ответственного должностного лица. Несколько ведомств могут налагать штрафы одновременно.",
+          "process": "Провести аудит текущего состояния (регистрация, карточки, история уведомлений) → устранить пробелы → обучить ответственное лицо → проводить самопроверку ежеквартально. По чувствительным вопросам (мобилизация и т.п.) придерживаться заранее согласованного с юротделом головного офиса протокола реагирования.",
+          "hrChecklist": [
+            "Проверить наличие приказа о назначении ответственного за воинский учёт (рекомендуется назначать сотрудника-гражданина РФ)",
+            "Обеспечить полное и актуальное заполнение карточек формы №18 на всех военнообязанных сотрудников",
+            "Проверить фактическую работу процесса уведомления военкомата о приёме/увольнении (срок 5 дней)",
+            "Проверить постановку организации на учёт в военкомате по месту регистрации (многие компании не встают на учёт — частое основание для штрафа)",
+            "Поддерживать канал немедленной эскалации в головной офис в Корее при изменении обстоятельств, связанных с мобилизацией"
+          ],
+          "internalDocs": [
+            "Приказ о назначении ответственного за воинский учёт",
+            "Карточки формы №18",
+            "Реестр переписки с военкоматом",
+            "Годовой план мероприятий"
+          ]
+        }
+      },
+      "effectiveDateI18n": {
+        "en": "Ongoing (enforcement continuing to tighten)",
+        "ru": "Действует (контроль продолжает ужесточаться)"
+      }
+    },
+    {
+      "id": "LAB-014",
+      "category": "인사데이터",
+      "titleKo": "직원 개인정보 처리 벌금 대폭 강화 — 유출 시 매출연동 벌금",
+      "titleRu": "420-ФЗ — штрафы за персональные данные",
+      "status": "시행중",
+      "impact": "High",
+      "effectiveDate": "2025-05-30",
+      "background": "대규모 개인정보 유출 사건이 잇따르자 제재를 대폭 강화(2024-11-30 연방법 420-ФЗ, 2025-05-30 발효). 인사 데이터(직원·지원자 정보)도 전부 개인정보 규제 대상.",
+      "whatChanged": "① 개인정보 처리 개시를 Роскомнадзор/Roskomnadzor에 미신고 시 벌금 10만~30만₽ (직원 1명만 있어도 신고 의무), ② 유출 시: 1천~1만명 규모 300만~500만₽, ③ 유출 후 24시간 내 미통보 100만~300만₽, ④ 대규모 유출 반복 시 매출연동 벌금 최대 5억₽.",
+      "penalty": "위 벌금 체계 자체. HR 시스템·엑셀 파일 유출도 동일 적용.",
+      "hrChecklist": [
+        "법인의 Роскомнадзор 개인정보 처리자 신고(등록) 여부 즉시 확인 — 미등록이면 최우선 조치",
+        "직원 개인정보 처리 동의서·개인정보규정(ЛНА/LNA) 현행화 (수집 항목·목적·보관기간 명시)",
+        "인사 데이터의 러시아 내 서버 1차 저장(로컬라이제이션) 여부 확인 — 본사 HR 시스템으로 전송 시 국외이전 절차 필요",
+        "유출 시 24시간 내 Роскомнадзор 통보하는 비상 대응 절차 문서화",
+        "인사 데이터 접근 권한 최소화 + 담당자 지정 приказ/prikaz/order"
+      ],
+      "internalDocs": [
+        "개인정보 처리 규정",
+        "직원 동의서 양식",
+        "국외이전 관련 문서",
+        "유출 대응 절차서"
+      ],
+      "process": "IT·보안 담당(본인 부서 협업 포인트)과 데이터 흐름도 작성 → 법무 검토 → Роскомнадзор 신고 현행화 → 본사 HR 시스템 연동 구조 점검",
+      "glossary": [
+        {
+          "term": "Роскомнадзор",
+          "ko": "통신·개인정보 감독청",
+          "en": "Roskomnadzor — data/comms authority"
+        },
+        {
+          "term": "локализация",
+          "ko": "러시아인 개인정보의 러시아 내 서버 1차 저장 의무(152-ФЗ)",
+          "en": "data localization"
+        }
+      ],
+      "sources": [
+        "https://kontur.ru/kedo/spravka/53645-shtrafy_za_narushenie_zakona_o_pd",
+        "https://e-kontur.ru/blog/16106/shtrafy-za-obrabotku-personalnykh-dannykh"
+      ],
+      "titleEn": "Law 420-FZ — fines for personal data violations",
+      "i18n": {
+        "en": {
+          "background": "A wave of large-scale personal-data breaches led to sharply tightened sanctions (Federal Law No. 420-FZ of Nov 30, 2024, effective May 30, 2025). HR data (employee and applicant information) is fully subject to personal-data regulation.",
+          "whatChanged": "① Failing to notify Roskomnadzor of the start of personal-data processing carries a fine of RUB 100K-300K (notification is required even with just one employee). ② A breach affecting 1,000-10,000 people: RUB 3M-5M. ③ Failing to report a breach within 24 hours: RUB 1M-3M. ④ Repeated large-scale breaches: a revenue-linked fine of up to RUB 500M.",
+          "penalty": "The fine schedule above applies directly. The same rules apply equally to a breach of an HR system or even a simple Excel file.",
+          "process": "Map the data flow together with IT/security → have legal review it → bring the Roskomnadzor notification up to date → review how the setup integrates with headquarters' HR system.",
+          "hrChecklist": [
+            "Immediately confirm whether the company is registered with Roskomnadzor as a personal-data operator — if not registered, this is top priority",
+            "Update the employee personal-data consent form and internal regulation (LNA) — specify what is collected, for what purpose, and for how long it's retained",
+            "Confirm whether HR data is first stored on a server inside Russia (localization) — sending it to the headquarters HR system requires a cross-border transfer procedure",
+            "Document an emergency response procedure for notifying Roskomnadzor within 24 hours of a breach",
+            "Minimize access rights to HR data and formally appoint a responsible person by order"
+          ],
+          "internalDocs": [
+            "Personal data processing regulation",
+            "Employee consent form",
+            "Cross-border transfer documentation",
+            "Breach response procedure"
+          ]
+        },
+        "ru": {
+          "background": "Серия крупных утечек персональных данных привела к резкому ужесточению санкций (Федеральный закон № 420-ФЗ от 30.11.2024, вступил в силу 30.05.2025). Кадровые данные (сведения о сотрудниках и кандидатах) полностью подпадают под регулирование персональных данных.",
+          "whatChanged": "① Отсутствие уведомления Роскомнадзора о начале обработки персональных данных — штраф 100-300 тыс. ₽ (уведомление обязательно даже при одном сотруднике). ② Утечка данных 1-10 тыс. человек — 3-5 млн ₽. ③ Неуведомление об утечке в течение 24 часов — 1-3 млн ₽. ④ Повторная крупная утечка — оборотный штраф до 500 млн ₽.",
+          "penalty": "Применяется указанная выше шкала штрафов напрямую. Те же правила действуют одинаково и при утечке из HR-системы, и при утечке обычного Excel-файла.",
+          "process": "Составить карту потоков данных совместно с ИТ/безопасностью → провести юридическую проверку → актуализировать уведомление в Роскомнадзор → проверить структуру интеграции с HR-системой головного офиса.",
+          "hrChecklist": [
+            "Немедленно проверить, зарегистрирована ли компания в Роскомнадзоре как оператор персональных данных — если нет, это первоочередная задача",
+            "Актуализировать форму согласия сотрудника на обработку персональных данных и внутреннее положение (ЛНА) — указать состав данных, цель и срок хранения",
+            "Проверить, хранятся ли кадровые данные сначала на сервере в России (локализация) — при передаче в HR-систему головного офиса требуется процедура трансграничной передачи",
+            "Задокументировать процедуру экстренного реагирования для уведомления Роскомнадзора в течение 24 часов после утечки",
+            "Минимизировать права доступа к кадровым данным и назначить ответственного приказом"
+          ],
+          "internalDocs": [
+            "Положение об обработке персональных данных",
+            "Форма согласия сотрудника",
+            "Документы о трансграничной передаче",
+            "Процедура реагирования на утечку"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-015",
+      "category": "문서·시스템",
+      "titleKo": "2026년 1월 인사행정 일괄 변경 — 신규 직업분류·장애인 쿼터 확대",
+      "titleRu": "ОК 016-2025, квоты для инвалидов",
+      "status": "시행중",
+      "impact": "Low",
+      "effectiveDate": "2026-01-01",
+      "background": "행정 정비 성격의 변경 묶음.",
+      "whatChanged": "① 직업분류코드가 구 ОК 016-94 → 신 ОК 016-2025로 교체 — 직제표·근로계약의 직위 명칭·코드 재검토 필요, ② 장애인 고용 쿼터가 지사·사무소 등 모든 분리 사업장(обособленное подразделение/separate subdivision) 단위로 적용 확대, ③ EAEU 국적자 소득에 누진세율(13~22%) 단일 적용.",
+      "penalty": "직접 벌금은 제한적이나, 쿼터 미이행 보고 누락 시 행정 벌금.",
+      "hrChecklist": [
+        "직제표의 직위 코드를 신규 분류 기준으로 대조·갱신",
+        "법인 규모가 장애인 쿼터 대상(통상 35인 이상, 지역별 상이)인지 확인",
+        "EAEU 국적 직원 원천징수 세율 처리를 회계법인에 확인"
+      ],
+      "internalDocs": [
+        "직제표",
+        "쿼터 이행 보고 서류"
+      ],
+      "process": "회계·노무 아웃소싱사에 일괄 반영 요청 후 결과 확인",
+      "glossary": [
+        {
+          "term": "обособленное подразделение",
+          "ko": "분리 사업장 — 본점과 다른 주소의 지사·사무소",
+          "en": "separate subdivision"
+        }
+      ],
+      "sources": [
+        "https://kontur.ru/articles/4819"
+      ],
+      "titleEn": "New job classifier OK 016-2025, disability quotas",
+      "i18n": {
+        "en": {
+          "background": "A bundle of administrative housekeeping changes.",
+          "whatChanged": "① The job classifier code switched from the old OK 016-94 to the new OK 016-2025 — job titles and codes in the staffing table and employment contracts need review. ② The disability employment quota now applies at the level of every separate subdivision (branch/office), not just the head office. ③ EAEU nationals' income is now subject to a single progressive tax rate (13-22%).",
+          "penalty": "Direct fines are limited, but failing to report quota compliance can result in an administrative fine.",
+          "process": "Ask your accounting/labor outsourcing firm to apply the changes in bulk, then confirm the results.",
+          "hrChecklist": [
+            "Cross-check and update job codes in the staffing table against the new classifier",
+            "Confirm whether the company's size meets the disability quota threshold (typically 35+ employees, varies by region)",
+            "Confirm withholding tax treatment for EAEU-national employees with your accounting firm"
+          ],
+          "internalDocs": [
+            "Staffing table",
+            "Quota compliance reporting documents"
+          ]
+        },
+        "ru": {
+          "background": "Пакет изменений административно-технического характера.",
+          "whatChanged": "① Классификатор профессий заменён со старого ОК 016-94 на новый ОК 016-2025 — требуется пересмотр наименований должностей и кодов в штатном расписании и трудовых договорах. ② Квота на трудоустройство инвалидов теперь применяется на уровне каждого обособленного подразделения (филиала/офиса), а не только головного офиса. ③ К доходам граждан ЕАЭС теперь применяется единая прогрессивная налоговая ставка (13-22%).",
+          "penalty": "Прямые штрафы ограничены, но непредставление отчётности о выполнении квоты может повлечь административный штраф.",
+          "process": "Запросить у бухгалтерского/кадрового аутсорсера комплексное применение изменений, затем проверить результат.",
+          "hrChecklist": [
+            "Сверить и обновить коды должностей в штатном расписании по новому классификатору",
+            "Проверить, подпадает ли компания под порог квоты для инвалидов (обычно от 35 сотрудников, зависит от региона)",
+            "Уточнить у бухгалтерии порядок удержания налога для сотрудников — граждан ЕАЭС"
+          ],
+          "internalDocs": [
+            "Штатное расписание",
+            "Документы отчётности по выполнению квоты"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-016",
+      "category": "문서·시스템",
+      "titleKo": "플랫폼 경제법 — 플랫폼 통한 외주 인력 사용 규칙 신설",
+      "titleRu": "289-ФЗ о платформенной экономике",
+      "status": "시행예정",
+      "impact": "Low",
+      "effectiveDate": "2026-10-01",
+      "background": "마켓플레이스·배달·프리랜서 플랫폼 전반을 규율하는 기본법(2025-07-31 연방법 289-ФЗ). 플랫폼 경유 자영업자(самозанятые/self-employed)·개인 도급 인력을 쓰는 회사에 영향.",
+      "whatChanged": "'성실 플랫폼 레지스트리'에 등록된 플랫폼만 실행인력과 도급계약 중개 가능. 플랫폼의 조건 변경·제재·랭킹 규칙 공개 의무화.",
+      "penalty": "미등록 플랫폼 경유 인력 사용 시 계약 적법성 리스크.",
+      "hrChecklist": [
+        "프로모터·행사 인력·배송 등 플랫폼/자영업자 경유 인력 사용 현황 파악",
+        "사용 중인 플랫폼이 레지스트리 등록 대상인지 10월 전 확인",
+        "자영업자 장기·상시 활용은 위장고용(переквалификация/reclassification) 리스크 — 병행 점검"
+      ],
+      "internalDocs": [
+        "도급·용역 계약서",
+        "외주 인력 사용 현황"
+      ],
+      "process": "사용 플랫폼 목록 작성 → 10월 이후 레지스트리 대조 → 문제 시 계약 구조 변경",
+      "glossary": [
+        {
+          "term": "самозанятый",
+          "ko": "자영업자(간이 과세 지위) — 상시 고용 대체 활용 시 노동관계로 재판정 리스크",
+          "en": "samozanyaty — self-employed status"
+        }
+      ],
+      "sources": [
+        "https://kurs.alfabank.ru/articles/289-fz-novye-pravila-platformennoj-zanyatosti/",
+        "https://tusoft.ru/blog/obshee/zakon-o-platformennoj-ekonomike-chto-izmenitsya-s-1-oktyabrya-2026-goda/"
+      ],
+      "titleEn": "Law 289-FZ on the platform economy",
+      "i18n": {
+        "en": {
+          "background": "A framework law governing marketplaces, delivery, and freelance platforms broadly (Federal Law No. 289-FZ of Jul 31, 2025). Affects companies using self-employed workers or individual contractors sourced through platforms.",
+          "whatChanged": "Only platforms listed in the \"Registry of Bona Fide Platforms\" may broker contract work with individual workers. Platforms must disclose their terms-change, penalty, and ranking rules.",
+          "penalty": "Using workers sourced through an unregistered platform creates contract-validity risk.",
+          "process": "Compile a list of platforms currently used → cross-check against the registry after October → restructure contracts if an issue is found.",
+          "hrChecklist": [
+            "Map current use of platform/self-employed workers (promoters, event staff, delivery, etc.)",
+            "Before October, confirm whether the platforms in use are subject to registry listing",
+            "Separately check for reclassification risk if self-employed workers are used long-term/regularly as if they were employees"
+          ],
+          "internalDocs": [
+            "Contractor/service agreement",
+            "Outsourced workforce usage records"
+          ]
+        },
+        "ru": {
+          "background": "Рамочный закон, регулирующий маркетплейсы, доставку и фриланс-платформы (Федеральный закон № 289-ФЗ от 31.07.2025). Затрагивает компании, использующие самозанятых или индивидуальных исполнителей через платформы.",
+          "whatChanged": "Только платформы, включённые в «реестр добросовестных платформ», смогут выступать посредником при заключении договоров с исполнителями. Платформы обязаны раскрывать правила изменения условий, санкций и ранжирования.",
+          "penalty": "Использование исполнителей через незарегистрированную платформу создаёт риск недействительности договора.",
+          "process": "Составить список используемых платформ → после октября сверить с реестром → при выявлении проблемы пересмотреть структуру договора.",
+          "hrChecklist": [
+            "Составить карту текущего использования исполнителей через платформы/самозанятых (промоутеры, персонал мероприятий, доставка и т.д.)",
+            "До октября проверить, подлежат ли используемые платформы включению в реестр",
+            "Отдельно проверить риск переквалификации при длительном/регулярном использовании самозанятых по факту как штатных сотрудников"
+          ],
+          "internalDocs": [
+            "Договор подряда/оказания услуг",
+            "Учёт использования внешнего персонала"
+          ]
+        }
+      }
+    }
+  ]
+}

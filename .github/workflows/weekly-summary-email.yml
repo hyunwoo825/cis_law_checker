@@ -1,0 +1,61 @@
+name: Weekly Update Summary Email
+
+# Claude Code Routine이 data/labor-regulations.json 을 main에 직접 push하면
+# (routine 관리이므로 별도 스케줄/트리거 없이) 이 이벤트를 받아 변경 요약을 이메일로 발송한다.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/labor-regulations.json"
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo (with history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build diff summary
+        id: diff
+        run: |
+          # 이전 커밋의 데이터 파일 추출 (최초 커밋 등 부모가 없으면 old.json 없이 진행)
+          git show HEAD^:data/labor-regulations.json > old.json 2>/dev/null || true
+
+          python3 .github/scripts/build_email_summary.py old.json data/labor-regulations.json summary.txt
+
+          if grep -q "실질적인 변경이 없습니다" summary.txt; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          {
+            echo "summary<<EOF"
+            cat summary.txt
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "today=$(date +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Send email
+        if: steps.diff.outputs.skip != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "[러시아 노동법 Checker] 주간 업데이트 ${{ steps.diff.outputs.today }}"
+          to: hyunwoo825@gmail.com
+          from: 러시아 노동법 Checker <${{ secrets.MAIL_USERNAME }}>
+          body: ${{ steps.diff.outputs.summary }}
