@@ -56,6 +56,9 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "[러시아 노동법 Checker] 주간 업데이트 ${{ steps.diff.outputs.today }}"
-          to: hyunwoo825@gmail.com
+          # 수신인은 리포지토리 변수 NOTIFY_EMAILS 로 관리 (Settings → Secrets and
+          # variables → Actions → Variables → New repository variable).
+          # 콤마로 구분해 여러 명 지정 가능. 변수가 없으면 기존 기본 수신인으로 폴백.
+          to: ${{ vars.NOTIFY_EMAILS || 'hyunwoo825@gmail.com' }}
           from: 러시아 노동법 Checker <${{ secrets.MAIL_USERNAME }}>
           body: ${{ steps.diff.outputs.summary }}

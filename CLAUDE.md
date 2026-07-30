@@ -27,7 +27,12 @@ data/labor-regulations.json   ← single source of truth. Edit this.
 build.py                      ← generates index.html from the JSON. Run after every edit.
 index.html                    ← FULLY GENERATED. Never hand-edit. Always regenerate via `python build.py`.
 CLAUDE.md                     ← this file
-.github/workflows/weekly-update.yml
+.github/workflows/weekly-summary-email.yml   ← fires on push to `main` that touches
+                                                data/labor-regulations.json; emails a
+                                                diff summary. Recipients are set via the
+                                                `NOTIFY_EMAILS` repo variable (Settings →
+                                                Secrets and variables → Actions → Variables),
+                                                comma-separated — not hardcoded in the YAML.
 ```
 
 **Golden rule: `data/labor-regulations.json` is the only file a human or
@@ -76,9 +81,13 @@ Each run (whether scheduled or manually triggered):
    automatically at build time, but set it explicitly if you know the
    research date).
 9. **Run `python build.py`.** Fix anything it errors on before proceeding.
-10. **Commit and push** both `data/labor-regulations.json` and the
-    regenerated `index.html` together. Commit message:
-    `Weekly update YYYY-MM-DD: <n> added, <m> updated` (state which IDs).
+10. **Commit and push directly to `main`** — both `data/labor-regulations.json`
+    and the regenerated `index.html`, together, in one commit. This routine
+    does **not** use a feature branch or PR: pushing straight to `main` is the
+    intended, approved workflow for this repo (it's also what triggers
+    `.github/workflows/weekly-summary-email.yml`, which emails a summary of
+    the update). Commit message: `Weekly update YYYY-MM-DD: <n> added, <m>
+    updated` (state which IDs).
 
 ## `data/labor-regulations.json` schema
 
