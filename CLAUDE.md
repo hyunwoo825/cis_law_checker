@@ -37,9 +37,12 @@ CLAUDE.md                     ← this file
                                                 Actions" (not "Deploy from a branch") — the
                                                 workflow's `deploy` job has no effect on the
                                                 live site otherwise. Email recipients come
-                                                from the `NOTIFY_EMAILS` repo variable
-                                                (Settings → Secrets and variables → Actions →
-                                                Variables), comma-separated — not hardcoded.
+                                                from the `NOTIFY_EMAILS` repo secret (Settings
+                                                → Secrets and variables → Actions → Secrets),
+                                                comma-separated — a repo secret rather than a
+                                                variable because this repo is public and a
+                                                plain variable would print recipient addresses
+                                                in cleartext in the (public) Actions log.
 ```
 
 **Golden rule: `data/labor-regulations.json` is the only file a human or

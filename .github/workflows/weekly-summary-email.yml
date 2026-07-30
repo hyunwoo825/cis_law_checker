@@ -96,8 +96,8 @@ jobs:
 
       - name: Check recipients configured
         run: |
-          if [ -z "${{ vars.NOTIFY_EMAILS }}" ]; then
-            echo "::error::NOTIFY_EMAILS repository variable is empty or unreadable. Set it under repo Settings -> Secrets and variables -> Actions -> Variables tab (NOT the Secrets tab, and NOT inside Settings -> Environments -> github-pages) with a comma-separated recipient list."
+          if [ -z "${{ secrets.NOTIFY_EMAILS }}" ]; then
+            echo "::error::NOTIFY_EMAILS repository secret is empty or unreadable. Set it under repo Settings -> Secrets and variables -> Actions -> Secrets tab (repository secret, NOT inside Settings -> Environments -> github-pages) with a comma-separated recipient list."
             exit 1
           fi
 
@@ -109,10 +109,12 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "[러시아 노동법 Checker] 주간 업데이트 ${{ steps.diff.outputs.today }} ${{ steps.diff.outputs.subject_suffix }}"
-          # 수신인은 리포지토리 변수 NOTIFY_EMAILS 로 관리 (Settings → Secrets and
-          # variables → Actions → Variables → New repository variable), 콤마로
-          # 구분해 여러 명 지정. 기본 수신인 폴백은 없으므로 이 변수를 반드시
-          # 설정해야 메일이 발송된다 (미설정 시 이 스텝은 수신인 없음으로 실패한다).
-          to: ${{ vars.NOTIFY_EMAILS }}
+          # 수신인은 리포지토리 시크릿 NOTIFY_EMAILS 로 관리 (Settings → Secrets and
+          # variables → Actions → Secrets → New repository secret), 콤마로
+          # 구분해 여러 명 지정. Variable이 아니라 Secret으로 두는 이유: 이 저장소가
+          # public이라 to 값이 Variable이면 Actions 로그에 이메일 주소가 평문으로
+          # 노출되지만, Secret은 로그에서 자동 마스킹된다. 기본 수신인 폴백은 없으므로
+          # 이 시크릿을 반드시 설정해야 메일이 발송된다.
+          to: ${{ secrets.NOTIFY_EMAILS }}
           from: 러시아 노동법 Checker <${{ secrets.MAIL_USERNAME }}>
           body: ${{ steps.diff.outputs.summary }}
