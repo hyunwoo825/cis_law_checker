@@ -2,7 +2,7 @@
   "meta": {
     "title": "러시아 노동법 Checker — HR용",
     "audience": "러시아 법인 한국인 인사총괄 (러시아법 배경지식 없음 전제)",
-    "lastUpdated": "2026-07-23",
+    "lastUpdated": "2026-07-30",
     "note": "한글 기본 + 러시아어 용어는 영어 병기(러시아어/English). 출처는 각 항목 sources 참조.",
     "statusLegend": {
       "시행중": "이미 발효되어 지금 준수해야 하는 규정",
@@ -615,24 +615,31 @@
     {
       "id": "LAB-008",
       "category": "채용·해고",
-      "titleKo": "노동법전 대개편 법안 — 초과근무·기간제 계약 유연화",
-      "titleRu": "Законопроект № 1103297-8 — реформа ТК",
-      "status": "계류중",
-      "impact": "Medium",
-      "effectiveDate": "2026-09-01 이후(미정)",
-      "background": "인력난 대응을 위한 노동시장 유연화 패키지. 1독회 통과 상태로 세부 내용은 변동 가능.",
-      "whatChanged": "예고된 방향: ① 초과근무(сверхурочная работа/overtime work) 연간 한도 확대 및 절차 간소화, ② 연금수급자·프로젝트 업무에 대한 기간제 계약(срочный договор/fixed-term contract) 체결 요건 완화, ③ 업무상 필요시 휴가 중 소환(отзыв из отпуска/vacation recall) 절차 명확화 + 금전 보상 의무.",
-      "penalty": "통과 전이므로 해당 없음. 통과 시 기존 초과근무 운영 방식 재정비 필요.",
+      "titleKo": "노동법전 개정안(초과근무 240시간·해고사유·휴가소환) — 연방법 제144-ФЗ호로 공포",
+      "titleRu": "Федеральный закон № 144-ФЗ от 25.05.2026 — поправки в ТК РФ",
+      "status": "시행예정",
+      "impact": "High",
+      "effectiveDate": "2026-09-01",
+      "background": "인력난 대응을 위한 노동시장 유연화 패키지 법안(구 법안번호 1103297-8)이 2독회·3독회를 통과해 2026-05-25 대통령 서명으로 연방법 제144-ФЗ호로 공포됨. 2026-09-01 시행 예정이며 세부 내용이 확정됨.",
+      "whatChanged": "① 초과근무(сверхурочная работа/overtime) 연간 한도를 120시간→240시간으로 확대 가능 — 단, 반드시 단체협약(коллективный договор) 또는 업종별 협약에 근거 규정이 있어야 하며 회사 일방 결정으로는 불가. 유해작업 3.3·3.4등급 근로자는 여전히 120시간 상한 유지. 3.1·3.2등급·연금수급자·준연금수급자는 서면 동의+건강상 결격사유 없음 확인 시에만 120시간 초과 가능. 보상: 최초 2시간 1.5배 이상, 이후(120시간 이내) 2배 이상, 120시간 초과분은 전부 2배 이상(또는 대체휴무). 120시간 초과 근무자는 연 1회 유급 건강검진일 부여. ② 중소기업 기간제 계약(срочный трудовой договор) 체결 가능 직원 수 상한 확대: 일반 업종 35명→70명, 소매·서비스업 20명→70명. ③ 휴가 중 소환(отзыв из отпуска/vacation recall): 유해작업 근로자는 재해 예방 등 예외 상황 외 소환 금지. 그 외 근로자 소환 시 2배 이상 보상 + 본인이 원하는 시기로 잔여휴가 재조정 의무. ④ 해고 사유(노동법 제81조) 확대: 절도·횡령·직장 내 고의적 재산 손괴로 형사기소가 비面책적 사유로 종결되어도 해고 가능.",
+      "penalty": "초과근무 한도·보상 규정 위반 시 근로감독청(ГИТ) 실사에서 КоАП/Admin. Offenses Code 5.27조 적용 — 법인 벌금 건당 최대 5만₽(반복 시 가중, 최대 10만₽ 이상). 위법한 휴가 소환·해고 시 근로자 소송으로 복직·임금 소급·정신적 손해배상 청구 가능.",
       "hrChecklist": [
-        "현재 초과근무 발생 패턴(성수기 프로모션·재고조사 등) 파악해두기 — 법 통과 시 활용 여지 커짐",
-        "기간제 계약 활용 가능 직무(프로젝트성 테스트 인력 등) 목록 미리 검토",
-        "2·3독회 통과 여부 분기별 모니터링"
+        "회사가 초과근무 한도를 240시간까지 확대할지 결정 — 확대하려면 단체협약/업종별 협약에 근거 조항 신설 필요(일방 규정 불가)",
+        "유해작업 등급(3.1~3.4)별 대상자 명단 정리 후 서면 동의서·건강상 결격사유 확인서 양식 준비",
+        "급여 시스템에 120시간 초과분 2배 보상 및 연 1회 유급 건강검진일 반영",
+        "휴가 소환 절차서(사유·보상 2배·재조정 방법)를 신설/개정하고 유해작업자는 소환 대상에서 제외 확인",
+        "절도·횡령 관련 해고 처리 시 개정된 제81조 근거로 노무 자문과 함께 절차 재점검",
+        "중소기업 해당 여부 확인 후 기간제 계약 활용 확대 가능성(70명 상한) 검토"
       ],
       "internalDocs": [
-        "취업규칙(근로시간 조항)",
+        "취업규칙(ПВТР, 근로시간·휴가 조항)",
+        "단체협약/업종별 협약(초과근무 한도 근거 조항)",
+        "급여 계산 정책(초과근무·건강검진일)",
+        "휴가 소환 절차서 및 동의서 양식",
+        "해고 절차 가이드(제81조)",
         "기간제 계약 템플릿"
       ],
-      "process": "법안 확정 전 액션 불필요 — 확정 시 노무 자문 받아 취업규칙 개정",
+      "process": "노무 자문에게 개정 내용 최종 확인 → 초과근무 한도 확대 여부 노사 협의(단체협약 개정) → ПВТР·급여 시스템·휴가 소환 양식 개정(2026-09-01 전 완료) → 전 직원 공지 → 본사 보고",
       "glossary": [
         {
           "term": "срочный трудовой договор",
@@ -641,44 +648,56 @@
         }
       ],
       "sources": [
-        "https://s-pro.group/tpost/s5gajamd61-izmeneniya-v-trudovom-kodekse-rf-v-2026"
+        "https://www.garant.ru/news/2089672/",
+        "https://www.klerk.ru/buh/articles/692656/",
+        "https://www.audit-it.ru/news/personnel/1133950.html"
       ],
-      "titleEn": "Draft law No. 1103297-8 — Labor Code reform",
+      "titleEn": "Federal Law No. 144-FZ of May 25, 2026 — Labor Code amendments",
       "i18n": {
         "en": {
-          "background": "A labor-market flexibility package aimed at addressing labor shortages. Passed its first reading; details may still change.",
-          "whatChanged": "Announced direction: ① expanding the annual overtime limit and simplifying its procedure, ② easing requirements for fixed-term contracts with pensioners and project-based work, ③ clarifying the procedure for recalling employees from vacation for business necessity, with mandatory monetary compensation.",
-          "penalty": "Not applicable yet since the bill hasn't passed. If passed, existing overtime practices will need to be reorganized.",
-          "process": "No action needed before the bill is finalized — once finalized, revise internal labor rules with the help of a labor advisor.",
+          "background": "The labor-market flexibility package (formerly draft bill No. 1103297-8) passed its 2nd and 3rd Duma readings and was signed into law by the President on 2026-05-25 as Federal Law No. 144-FZ. It takes effect 2026-09-01 with all details now finalized.",
+          "whatChanged": "① The annual overtime limit can be raised from 120 to 240 hours — but only if a collective agreement or sectoral agreement expressly provides for it; a company cannot raise the limit unilaterally. Workers in hazardous-condition subcategories 3.3-3.4 remain capped at 120 hours. Subcategories 3.1-3.2, pensioners, and pre-retirees may exceed 120 hours only with written consent and confirmation of no medical contraindications. Pay: the first 2 hours at 1.5x minimum, subsequent hours up to 120 at 2x minimum, and all hours beyond 120 at 2x minimum (or compensatory time off). Workers who exceed 120 hours get one paid medical check-up day per year. ② The employee-count ceiling for using fixed-term contracts at small/medium businesses rises from 35 to 70 generally, and from 20 to 70 for retail/services. ③ Vacation recall: hazardous-condition workers cannot be recalled from vacation except to prevent accidents/disasters; other recalled employees must be paid at least 2x and get their remaining leave rescheduled at a time of their choosing. ④ Dismissal grounds (Labor Code Art. 81) expanded: a court's non-exculpatory termination of a criminal case no longer blocks dismissal for workplace theft, embezzlement, or intentional property damage.",
+          "penalty": "Violating the overtime limit/compensation rules exposes the company to a labor-inspectorate (GIT) fine under Administrative Offenses Code Art. 5.27 — up to RUB 50,000 per violation (higher for repeat violations). Unlawful vacation recall or dismissal can lead to employee lawsuits for reinstatement, back pay, and moral damages.",
+          "process": "Confirm the finalized rules with a labor advisor → negotiate with staff/union on whether to raise the overtime limit (requires a collective-agreement amendment) → update internal labor rules, payroll system, and vacation-recall forms before 2026-09-01 → notify all staff → report to headquarters.",
           "hrChecklist": [
-            "Start tracking current overtime patterns (peak-season promotions, stocktaking, etc.) — will be more usable once the law passes",
-            "Pre-review which roles (e.g., project-based test staff) could use fixed-term contracts",
-            "Monitor quarterly whether the bill passes its 2nd/3rd reading"
+            "Decide whether the company will raise the overtime limit to 240 hours — doing so requires a new clause in a collective or sectoral agreement (cannot be set unilaterally)",
+            "List employees by hazardous-work subcategory (3.1-3.4) and prepare written-consent and no-contraindication confirmation forms",
+            "Update payroll to pay 2x for hours beyond 120 and to grant one paid medical check-up day per year",
+            "Create or revise a vacation-recall procedure (grounds, 2x pay, rescheduling method) and confirm hazardous-condition workers are excluded from recall",
+            "Re-review theft/embezzlement dismissal procedures with a labor advisor under the amended Art. 81",
+            "Check whether the company qualifies as a small/medium business and reassess fixed-term contract usage under the new 70-employee ceiling"
           ],
           "internalDocs": [
-            "Internal labor rules (working-hours clause)",
+            "Internal labor rules (working-hours and vacation clauses)",
+            "Collective agreement / sectoral agreement (overtime-limit clause)",
+            "Payroll calculation policy (overtime, medical check-up day)",
+            "Vacation-recall procedure and consent forms",
+            "Dismissal procedure guide (Art. 81)",
             "Fixed-term contract template"
           ]
         },
         "ru": {
-          "background": "Пакет мер по повышению гибкости рынка труда для решения проблемы нехватки кадров. Принят в первом чтении, детали могут измениться.",
-          "whatChanged": "Анонсированное направление: ① расширение годового лимита сверхурочной работы и упрощение процедуры её оформления, ② смягчение требований к срочным договорам с пенсионерами и на проектную работу, ③ уточнение процедуры отзыва работника из отпуска по производственной необходимости с обязательной денежной компенсацией.",
-          "penalty": "Пока не применимо, так как законопроект не принят. При принятии потребуется пересмотр действующей практики привлечения к сверхурочной работе.",
-          "process": "До окончательного принятия законопроекта действия не требуются — после принятия пересмотреть ПВТР при содействии юриста по трудовому праву.",
+          "background": "Пакет мер по повышению гибкости рынка труда (бывший законопроект № 1103297-8) прошёл второе и третье чтения в Госдуме и 25.05.2026 подписан Президентом как Федеральный закон № 144-ФЗ. Вступает в силу 01.09.2026, все детали уже окончательно определены.",
+          "whatChanged": "① Годовой лимит сверхурочной работы можно увеличить со 120 до 240 часов — но только если это прямо предусмотрено коллективным договором или отраслевым соглашением; работодатель не может увеличить лимит в одностороннем порядке. Для вредных подклассов 3.3-3.4 сохраняется лимит 120 часов. Для подклассов 3.1-3.2, пенсионеров и предпенсионеров превышение 120 часов возможно только с письменного согласия и при отсутствии медицинских противопоказаний. Оплата: первые 2 часа не менее чем в 1,5-кратном размере, далее до 120 часов — не менее чем в 2-кратном, всё свыше 120 часов — не менее чем в 2-кратном размере (или отгул). Работникам, превысившим 120 часов, положен один оплачиваемый день для медосмотра в год. ② Порог численности работников для заключения срочных трудовых договоров на малых/средних предприятиях повышен: с 35 до 70 — в целом, с 20 до 70 — в рознице и сфере услуг. ③ Отзыв из отпуска: работников на вредных условиях труда нельзя отзывать из отпуска, кроме случаев предотвращения катастроф/аварий; остальным отозванным положена оплата не менее чем в 2-кратном размере и перенос оставшейся части отпуска на удобное для них время. ④ Основания увольнения (ст. 81 ТК РФ) расширены: прекращение уголовного преследования по нереабилитирующим основаниям больше не препятствует увольнению за хищение, растрату или умышленное повреждение имущества на рабочем месте.",
+          "penalty": "Нарушение правил лимита/оплаты сверхурочной работы влечёт штраф по ст. 5.27 КоАП РФ при проверке ГИТ — до 50 000 ₽ за каждое нарушение (при повторных — больше). Незаконный отзыв из отпуска или увольнение могут привести к искам работников о восстановлении, взыскании зарплаты и компенсации морального вреда.",
+          "process": "Уточнить у юриста по трудовому праву финальные формулировки → провести переговоры с работниками/профсоюзом о повышении лимита сверхурочных (требуется изменение коллективного договора) → до 01.09.2026 обновить ПВТР, систему расчёта зарплаты и формы отзыва из отпуска → уведомить всех сотрудников → доложить головному офису.",
           "hrChecklist": [
-            "Начать фиксировать текущие паттерны сверхурочной работы (промоакции в пиковый сезон, инвентаризация и т.д.) — пригодится после принятия закона",
-            "Заранее рассмотреть, для каких должностей (например, проектный тестовый персонал) можно использовать срочные договоры",
-            "Ежеквартально отслеживать прохождение 2 и 3 чтения законопроекта"
+            "Решить, будет ли компания повышать лимит сверхурочных до 240 часов — для этого нужен новый пункт в коллективном или отраслевом соглашении (в одностороннем порядке нельзя)",
+            "Составить список сотрудников по подклассам вредности (3.1-3.4) и подготовить формы письменного согласия и подтверждения отсутствия противопоказаний",
+            "Обновить расчёт зарплаты для оплаты 2x за часы свыше 120 и предоставления оплачиваемого дня медосмотра",
+            "Разработать/пересмотреть процедуру отзыва из отпуска (основания, оплата 2x, порядок переноса) и убедиться, что вредники исключены из отзыва",
+            "Пересмотреть с юристом процедуру увольнения за хищение/растрату с учётом обновлённой ст. 81",
+            "Проверить, относится ли компания к малому/среднему бизнесу, и пересмотреть использование срочных договоров с учётом нового порога в 70 человек"
           ],
           "internalDocs": [
-            "ПВТР (раздел о рабочем времени)",
+            "ПВТР (разделы о рабочем времени и отпусках)",
+            "Коллективный договор / отраслевое соглашение (пункт о лимите сверхурочных)",
+            "Политика расчёта зарплаты (сверхурочные, день медосмотра)",
+            "Процедура отзыва из отпуска и формы согласия",
+            "Инструкция по процедуре увольнения (ст. 81)",
             "Шаблон срочного трудового договора"
           ]
         }
-      },
-      "effectiveDateI18n": {
-        "en": "On or after 2026-09-01 (TBD)",
-        "ru": "После 2026-09-01 (точная дата не определена)"
       }
     },
     {
@@ -1253,6 +1272,75 @@
           "internalDocs": [
             "Договор подряда/оказания услуг",
             "Учёт использования внешнего персонала"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-017",
+      "category": "채용·해고",
+      "titleKo": "졸업생 인턴십(стажировка) 정식 근로계약 유형 신설",
+      "titleRu": "Закон о стажировке выпускников — новая глава ТК РФ",
+      "titleEn": "New graduate 'internship' (stazhirovka) employment contract type",
+      "status": "계류중",
+      "impact": "Medium",
+      "effectiveDate": "2027-03-01",
+      "background": "인력난 및 청년 취업난 대응 차원에서 대통령이 ПМЭФ-2026(상트페테르부르크 국제경제포럼)에서 관련 법안의 신속 처리를 요청. 2026-07-08 국가두마 2·3독회 통과(법안번호 및 대통령 서명·연방관보 게재 절차는 확인 대기 중).",
+      "whatChanged": "① '스타지롭카(стажировка)'를 정식 근로계약 유형으로 신설 — 전문대·대학 졸업(예정)자 또는 재교육 과정 이수(예정)자가 첫 실무 경력을 쌓기 위해 체결하는 기간제 근로계약(срочный трудовой договор). ② 계약기간 최대 6개월, 급여·근속연수·병가 등 일반 근로자와 동일한 권리 보장(무급 실습 금지). ③ 멘토링(наставничество) 의무 배정. ④ 스타지요르(стажёр) 직함을 직제표·계약서에 명시. ⑤ 졸업 후 1년 이내에 계약 체결해야 함. ⑥ 같은 회사가 스타지롭카 종료 후 정식 채용 시 시험기간(수습) 면제. ⑦ 공무원·지자체 공무원 및 기존 산업안전 실습·자격 실습 제도에는 적용되지 않음.",
+      "penalty": "통과·공포 전이므로 직접 벌칙은 아직 없음. 시행 시 스타지롭카 계약을 일반 무급 인턴/수습으로 잘못 운영하면 위장 도급·미지급 임금 문제로 근로감독청 제재 및 소급 임금 지급 리스크 발생 가능.",
+      "hrChecklist": [
+        "신입/졸업예정자 채용 프로그램(인턴십 등)이 있는 경우 현재 운영 방식(유급 여부·계약 형태) 점검",
+        "법 공포·시행일(2027-03-01 예정) 확정 여부 분기별 확인",
+        "시행 확정 시 스타지롭카 전용 계약서 템플릿과 멘토 지정 절차 준비",
+        "인사팀·현업 부서에 '무급 인턴' 관행 폐지 필요성 사전 공지"
+      ],
+      "internalDocs": [
+        "신입사원 채용 절차서",
+        "인턴십/수습 관련 내부 규정"
+      ],
+      "process": "2·3독회 통과 상태 — 대통령 서명·연방관보 게재 여부 분기별 모니터링 → 공포 확인 시 노무 자문과 계약서·절차 정비",
+      "glossary": [
+        {
+          "term": "стажировка",
+          "ko": "스타지롭카 — 졸업(예정)자 대상 최대 6개월 유급 기간제 인턴십 근로계약(신설 예정 제도)",
+          "en": "stazhirovka — a new formal fixed-term paid internship contract for recent/upcoming graduates"
+        }
+      ],
+      "sources": [
+        "https://ria.ru/20260708/gosduma-2103523664.html",
+        "https://vladnews.ru/2026-07-09/271066/gosduma_prinyala"
+      ],
+      "i18n": {
+        "en": {
+          "background": "Aimed at easing labor shortages and youth unemployment, the President asked for expedited passage of this bill at SPIEF-2026 (St. Petersburg International Economic Forum). The State Duma passed it on its 2nd and 3rd readings on 2026-07-08 (Federation Council approval and presidential signature/publication are still pending confirmation).",
+          "whatChanged": "① Creates 'stazhirovka' (internship) as a formal employment-contract type — a fixed-term contract for people who have graduated or are graduating from vocational/higher education, or completing retraining, to gain their first work experience. ② Maximum term of 6 months, with the same rights as regular employees — pay, seniority credit, sick leave (unpaid internships are prohibited). ③ Mandatory mentor assignment. ④ The 'stazhyor' (intern) title must appear in the staffing table and contract. ⑤ The contract must be signed within 1 year of graduation. ⑥ If the same employer hires the person permanently afterward, no probationary period applies. ⑦ Does not apply to civil servants/municipal employees or to existing safety-training/licensing internships.",
+          "penalty": "No direct penalty yet since the bill is not yet promulgated. Once in force, misclassifying a stazhirovka contract as an unpaid internship or informal arrangement risks labor-inspectorate sanctions and retroactive wage claims for disguised/unpaid employment.",
+          "process": "Currently passed 2nd/3rd Duma reading — monitor quarterly for Federation Council approval and presidential signature/publication → once promulgated, work with a labor advisor to prepare a dedicated contract template and mentor-assignment procedure.",
+          "hrChecklist": [
+            "If the company runs a new-graduate hiring/internship program, review its current setup (paid status, contract type)",
+            "Check quarterly whether the law has been promulgated (effective date targeted for 2027-03-01)",
+            "Once confirmed, prepare a dedicated stazhirovka contract template and mentor-assignment procedure",
+            "Notify HR and line managers in advance that unpaid-internship practices will need to be phased out"
+          ],
+          "internalDocs": [
+            "New-hire recruitment procedure",
+            "Internal internship/probation policy"
+          ]
+        },
+        "ru": {
+          "background": "В целях смягчения дефицита кадров и молодёжной безработицы Президент на ПМЭФ-2026 попросил ускорить принятие данного законопроекта. Госдума приняла его во втором и третьем чтениях 08.07.2026 (одобрение Советом Федерации и подписание Президентом/публикация пока не подтверждены).",
+          "whatChanged": "① Вводится «стажировка» как формальный вид трудового договора — срочный трудовой договор для лиц, получивших или получающих среднее профессиональное/высшее образование либо проходящих переподготовку, для получения первого профессионального опыта. ② Максимальный срок — 6 месяцев, с теми же правами, что и у обычных работников: оплата, трудовой стаж, больничный (неоплачиваемые стажировки запрещены). ③ Обязательное назначение наставника. ④ Должность «стажёр» должна быть указана в штатном расписании и договоре. ⑤ Договор должен быть заключён не позднее одного года после получения образования. ⑥ При последующем постоянном трудоустройстве у того же работодателя испытательный срок не устанавливается. ⑦ Не распространяется на госслужащих/муниципальных служащих и на существующие стажировки по охране труда/допуску к профессии.",
+          "penalty": "Прямых санкций пока нет, так как закон не опубликован. После вступления в силу оформление стажировки как неоплачиваемой практики или неформальной договорённости повлечёт риск санкций ГИТ и взыскания зарплаты задним числом за скрытые трудовые отношения.",
+          "process": "На данный момент принят во 2 и 3 чтениях Госдумой — ежеквартально отслеживать одобрение Советом Федерации и подписание/публикацию Президентом → после опубликования подготовить с юристом отдельный шаблон договора о стажировке и процедуру назначения наставника.",
+          "hrChecklist": [
+            "Если в компании есть программа найма/стажировок для выпускников, проверить текущий формат (оплачиваемость, вид договора)",
+            "Ежеквартально проверять факт опубликования закона (целевая дата вступления в силу — 01.03.2027)",
+            "После подтверждения подготовить отдельный шаблон договора о стажировке и процедуру назначения наставника",
+            "Заранее уведомить HR и руководителей подразделений о необходимости отказа от практики неоплачиваемых стажировок"
+          ],
+          "internalDocs": [
+            "Процедура найма новых сотрудников",
+            "Внутреннее положение о стажировках/испытательном сроке"
           ]
         }
       }
