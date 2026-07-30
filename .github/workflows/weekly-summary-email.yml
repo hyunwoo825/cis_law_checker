@@ -1,18 +1,54 @@
-name: Weekly Update Summary Email
+name: Deploy Pages & Weekly Update Summary Email
 
 # Claude Code Routine이 data/labor-regulations.json 을 main에 직접 push하면
-# (routine 관리이므로 별도 스케줄/트리거 없이) 이 이벤트를 받아 변경 요약을 이메일로 발송한다.
+# (routine 자체가 스케줄/트리거를 관리하므로 별도 cron 없음) 이 이벤트를 받아
+# 1) GitHub Pages에 index.html을 배포하고, 2) 배포가 끝난 뒤에만 변경 요약 이메일을 보낸다.
+#
+# 주의: deploy 잡이 실제로 GitHub Pages를 배포하려면 저장소 설정에서
+# Settings → Pages → Build and deployment → Source 를 "GitHub Actions"로
+# 바꿔야 한다. "Deploy from a branch"로 되어 있으면 이 워크플로우의 deploy
+# 잡과 무관하게 GitHub가 자체적으로 배포하므로 선후관계 보장이 깨진다.
 on:
   push:
     branches: [main]
     paths:
       - "data/labor-regulations.json"
+      - "index.html"
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
   notify:
+    needs: deploy
+    if: needs.deploy.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo (with history)
@@ -39,10 +75,15 @@ jobs:
             echo "skip=false" >> "$GITHUB_OUTPUT"
           fi
 
+          # 멀티라인 출력은 고정 구분자("EOF") 대신 매 실행마다 바뀌는 무작위
+          # 구분자를 써서, summary.txt 내용에 우연히 "EOF"라는 줄이 있어도
+          # 구분자 매칭이 깨지지 않도록 한다 (GitHub Actions 권장 방식).
+          delimiter="EOF_$(openssl rand -hex 8)"
           {
-            echo "summary<<EOF"
+            echo "summary<<$delimiter"
             cat summary.txt
-            echo "EOF"
+            echo ""
+            echo "$delimiter"
           } >> "$GITHUB_OUTPUT"
 
           echo "today=$(date +%F)" >> "$GITHUB_OUTPUT"

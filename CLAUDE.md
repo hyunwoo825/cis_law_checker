@@ -28,11 +28,18 @@ build.py                      ← generates index.html from the JSON. Run after 
 index.html                    ← FULLY GENERATED. Never hand-edit. Always regenerate via `python build.py`.
 CLAUDE.md                     ← this file
 .github/workflows/weekly-summary-email.yml   ← fires on push to `main` that touches
-                                                data/labor-regulations.json; emails a
-                                                diff summary. Recipients are set via the
-                                                `NOTIFY_EMAILS` repo variable (Settings →
-                                                Secrets and variables → Actions → Variables),
-                                                comma-separated — not hardcoded in the YAML.
+                                                data/labor-regulations.json or index.html.
+                                                Two ordered jobs: `deploy` (publishes
+                                                index.html to GitHub Pages) runs first;
+                                                `notify` (needs: deploy) only sends the diff
+                                                summary email after deploy succeeds. Requires
+                                                repo Settings → Pages → Source = "GitHub
+                                                Actions" (not "Deploy from a branch") — the
+                                                workflow's `deploy` job has no effect on the
+                                                live site otherwise. Email recipients come
+                                                from the `NOTIFY_EMAILS` repo variable
+                                                (Settings → Secrets and variables → Actions →
+                                                Variables), comma-separated — not hardcoded.
 ```
 
 **Golden rule: `data/labor-regulations.json` is the only file a human or

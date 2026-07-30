@@ -53,7 +53,7 @@ def main():
         lines.append(f"최초 데이터 커밋입니다. 총 {len(new_data.get('regulations', []))}건이 등록되어 있습니다.")
         out = "\n".join(lines)
         with open(out_path, "w", encoding="utf-8") as f:
-            f.write(out)
+            f.write(out + "\n")
         return
 
     old_map = index_by_id(old_data)
@@ -108,7 +108,7 @@ def main():
 
     out = "\n".join(lines)
     with open(out_path, "w", encoding="utf-8") as f:
-        f.write(out)
+        f.write(out + "\n")
     print(out)
 
 
