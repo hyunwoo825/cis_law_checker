@@ -35,19 +35,22 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
+        # v3는 현재 최신판이지만 내부적으로 여전히 Node20 기반 actions/upload-artifact@v4를
+        # 호출해 Node20 지원 종료 경고가 남을 수 있음 — 우리 쪽에서 고칠 수 없는 상위
+        # 액션(actions/upload-pages-artifact)의 미해결 이슈. 새 버전이 나오면 올릴 것.
         uses: actions/upload-pages-artifact@v3
         with:
           path: "."
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
   notify:
     needs: deploy
@@ -55,12 +58,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo (with history)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
@@ -92,7 +95,7 @@ jobs:
           echo "today=$(date +%F)" >> "$GITHUB_OUTPUT"
 
       - name: Send email
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v17
         with:
           server_address: smtp.gmail.com
           server_port: 465
