@@ -104,7 +104,6 @@ def main():
     lines.append("")
     lines.append("-" * 50)
     lines.append("대시보드: https://hyunwoo825.github.io/cis_law_checker/")
-    lines.append("리포: https://github.com/hyunwoo825/cis_law_checker")
 
     out = "\n".join(lines)
     with open(out_path, "w", encoding="utf-8") as f:
