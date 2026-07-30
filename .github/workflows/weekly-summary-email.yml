@@ -2,7 +2,9 @@ name: Deploy Pages & Weekly Update Summary Email
 
 # Claude Code Routine이 data/labor-regulations.json 을 main에 직접 push하면
 # (routine 자체가 스케줄/트리거를 관리하므로 별도 cron 없음) 이 이벤트를 받아
-# 1) GitHub Pages에 index.html을 배포하고, 2) 배포가 끝난 뒤에만 변경 요약 이메일을 보낸다.
+# 1) GitHub Pages에 index.html을 배포하고, 2) 배포가 끝난 뒤 변경 요약 이메일을 보낸다.
+# 실질적인 데이터 변경이 없었던 주에도 메일은 보내되, 본문에 "변경 없음"을 명시한다
+# (조용히 건너뛰면 루틴이 실행됐는지 여부를 받는 사람이 알 수 없기 때문).
 #
 # 주의: deploy 잡이 실제로 GitHub Pages를 배포하려면 저장소 설정에서
 # Settings → Pages → Build and deployment → Source 를 "GitHub Actions"로
@@ -71,9 +73,9 @@ jobs:
           python3 .github/scripts/build_email_summary.py old.json data/labor-regulations.json summary.txt
 
           if grep -q "실질적인 변경이 없습니다" summary.txt; then
-            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "subject_suffix=(변경 없음)" >> "$GITHUB_OUTPUT"
           else
-            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "subject_suffix=" >> "$GITHUB_OUTPUT"
           fi
 
           # 멀티라인 출력은 고정 구분자("EOF") 대신 매 실행마다 바뀌는 무작위
@@ -90,17 +92,17 @@ jobs:
           echo "today=$(date +%F)" >> "$GITHUB_OUTPUT"
 
       - name: Send email
-        if: steps.diff.outputs.skip != 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "[러시아 노동법 Checker] 주간 업데이트 ${{ steps.diff.outputs.today }}"
+          subject: "[러시아 노동법 Checker] 주간 업데이트 ${{ steps.diff.outputs.today }} ${{ steps.diff.outputs.subject_suffix }}"
           # 수신인은 리포지토리 변수 NOTIFY_EMAILS 로 관리 (Settings → Secrets and
-          # variables → Actions → Variables → New repository variable).
-          # 콤마로 구분해 여러 명 지정 가능. 변수가 없으면 기존 기본 수신인으로 폴백.
-          to: ${{ vars.NOTIFY_EMAILS || 'hyunwoo825@gmail.com' }}
+          # variables → Actions → Variables → New repository variable), 콤마로
+          # 구분해 여러 명 지정. 기본 수신인 폴백은 없으므로 이 변수를 반드시
+          # 설정해야 메일이 발송된다 (미설정 시 이 스텝은 수신인 없음으로 실패한다).
+          to: ${{ vars.NOTIFY_EMAILS }}
           from: 러시아 노동법 Checker <${{ secrets.MAIL_USERNAME }}>
           body: ${{ steps.diff.outputs.summary }}
