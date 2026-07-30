@@ -94,6 +94,13 @@ jobs:
 
           echo "today=$(date +%F)" >> "$GITHUB_OUTPUT"
 
+      - name: Check recipients configured
+        run: |
+          if [ -z "${{ vars.NOTIFY_EMAILS }}" ]; then
+            echo "::error::NOTIFY_EMAILS repository variable is empty or unreadable. Set it under repo Settings -> Secrets and variables -> Actions -> Variables tab (NOT the Secrets tab, and NOT inside Settings -> Environments -> github-pages) with a comma-separated recipient list."
+            exit 1
+          fi
+
       - name: Send email
         uses: dawidd6/action-send-mail@v17
         with:
