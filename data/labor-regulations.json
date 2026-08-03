@@ -2,7 +2,7 @@
   "meta": {
     "title": "러시아 노동법 Checker — HR용",
     "audience": "러시아 법인 한국인 인사총괄 (러시아법 배경지식 없음 전제)",
-    "lastUpdated": "2026-07-30",
+    "lastUpdated": "2026-08-03",
     "note": "한글 기본 + 러시아어 용어는 영어 병기(러시아어/English). 출처는 각 항목 sources 참조.",
     "statusLegend": {
       "시행중": "이미 발효되어 지금 준수해야 하는 규정",
@@ -134,65 +134,77 @@
       "impact": "High",
       "effectiveDate": "2026-01-01",
       "background": "정부가 2030년까지 최저임금을 단계적으로 크게 올리는 정책 기조. 2026년 인상폭(+20.7%)이 특히 큼.",
-      "whatChanged": "연방 МРОТ/MROT가 22,440루블 → 27,093루블로 인상. 풀타임 근무자의 월 급여(세전)는 이 금액 미만이 될 수 없음. 모스크바는 별도의 더 높은 지역 최저임금이 적용되므로 지역 기준 확인 필수. 부가 변화: 무급 대표(급여 없는 법인장)에 대해서도 МРОТ 기준 사회보험료 납부 의무 신설.",
-      "penalty": "МРОТ 미달 지급 시 КоАП/Admin. Offenses Code 5.27조 벌금(법인 최대 5만₽/건) + 차액 소급 지급. 반복 시 가중.",
+      "whatChanged": "① 연방 МРОТ/MROT가 22,440루블 → 27,093루블로 인상. 풀타임 근무자의 월 급여(세전)는 이 금액 미만이 될 수 없음. ② 모스크바시는 시정부·노동조합연합·경영자단체 3자협약으로 2026년 지역 최저임금을 연방 기준보다 높은 39,730루블로 별도 확정(2025-12-11 공표, 2026-01-01 시행). 공표 후 30일 이내(~2026-01-10)에 서면 거부신고서(мотивированный отказ)를 제출하지 않은 사업장은 자동 가입 간주되어 39,730루블 기준이 적용됨 — 거부신고를 제출한 적이 없다면 이미 이 기준에 구속됨. ③ 무급 대표(급여 없는 법인장)에 대해서도 МРОТ 기준 사회보험료 납부 의무 신설.",
+      "penalty": "МРОТ/지역 최저임금 미달 지급 시 КоАП/Admin. Offenses Code 5.27조 벌금(법인 최대 5만₽/건) + 차액 소급 지급. 반복 시 가중. 모스크바 협약에 가입 간주된 사업장은 27,093루블이 아닌 39,730루블을 기준으로 판단.",
       "hrChecklist": [
-        "전 직원 급여 테이블에서 세전 기본급이 모스크바 지역 최저임금 이상인지 일괄 점검",
+        "전 직원 급여 테이블에서 세전 기본급이 모스크바 지역 최저임금 39,730루블(2026-01-01 기준) 이상인지 일괄 점검",
+        "당사가 2026년 모스크바 최저임금 협약에 서면 거부신고서를 제출한 적이 있는지 확인 — 미제출 시 자동 가입으로 39,730루블 기준이 이미 적용 중",
         "파트타임·단시간 근무자는 근무시간 비례 기준으로 재계산",
         "보수규정(Положение об оплате труда/Pay Regulation)의 최저 등급 급여 갱신",
-        "급여 아웃소싱 회계법인에 2026년 기준 반영 여부 서면 확인"
+        "급여 아웃소싱 회계법인에 2026년 기준(연방·모스크바 지역 모두) 반영 여부 서면 확인"
       ],
       "internalDocs": [
         "보수규정(Положение об оплате труда)",
         "штатное расписание/staffing table(직제표)",
-        "근로계약서 급여 조항"
+        "근로계약서 급여 조항",
+        "모스크바 최저임금 3자협약 원문(가입/거부 여부 확인용)"
       ],
-      "process": "회계법인에 현재 급여 하한 검증 요청 → 미달자 발견 시 допсоглашение/supplementary agreement(계약 변경 합의서) 체결 → 본사에 인건비 영향 보고",
+      "process": "회계법인에 현재 급여 하한 검증 요청(연방·모스크바 지역 기준 모두) → 미달자 발견 시 допсоглашение/supplementary agreement(계약 변경 합의서) 체결 → 본사에 인건비 영향 보고",
       "glossary": [
         {
           "term": "штатное расписание",
           "ko": "직제표 — 직위·급여를 명시한 필수 인사문서",
           "en": "staffing table"
+        },
+        {
+          "term": "мотивированный отказ",
+          "ko": "거부신고서 — 지역 최저임금 협약 공표 후 30일 이내 미제출 시 자동 가입 간주",
+          "en": "motivated refusal — a written opt-out from a regional minimum-wage agreement"
         }
       ],
       "sources": [
         "https://kontur.ru/articles/4819",
-        "https://konsugroup.com/en/news/changes-minimal-wage-regional-practice-2026/"
+        "https://konsugroup.com/en/news/changes-minimal-wage-regional-practice-2026/",
+        "https://www.garant.ru/hotlaw/moscow/1929105/"
       ],
       "titleEn": "MROT (minimum wage) from Jan 1, 2026 — RUB 27,093",
       "i18n": {
         "en": {
           "background": "The government's policy is to raise the minimum wage significantly in stages through 2030. The 2026 increase (+20.7%) is especially large.",
-          "whatChanged": "The federal minimum wage (MROT) rose from RUB 22,440 to RUB 27,093. Full-time employees' monthly pay (before tax) cannot fall below this amount. Moscow applies its own higher regional minimum wage, so always check the regional figure. Additional change: unpaid general directors (with no salary) are now also subject to mandatory social insurance contributions calculated on the MROT base.",
-          "penalty": "Paying below MROT triggers a fine under Administrative Offenses Code Art. 5.27 (up to RUB 50,000 per violation for the company) plus retroactive payment of the shortfall. Penalties increase for repeat violations.",
-          "process": "Ask your accounting/payroll provider to verify the current pay floor → if anyone falls short, sign a supplementary agreement with them → report the payroll cost impact to headquarters.",
+          "whatChanged": "① The federal minimum wage (MROT) rose from RUB 22,440 to RUB 27,093. Full-time employees' monthly pay (before tax) cannot fall below this amount. ② The city of Moscow, in a tripartite agreement among the city government, trade-union associations, and employer associations, separately set a higher 2026 regional minimum wage of RUB 39,730 (published Dec 11, 2025; effective Jan 1, 2026). Any employer that did not file a written motivated refusal within 30 days of publication (by roughly Jan 10, 2026) is automatically deemed to have joined the agreement and is bound by the RUB 39,730 floor — if your company never filed a refusal, you are already bound by it. ③ Company directors serving without pay are now also subject to mandatory social insurance contributions calculated on the MROT base.",
+          "penalty": "Paying below the applicable minimum triggers a fine under Administrative Offenses Code Art. 5.27 (up to RUB 50,000 per violation for the company) plus retroactive payment of the shortfall; penalties increase for repeat violations. Employers deemed to have joined the Moscow agreement are assessed against RUB 39,730, not the federal RUB 27,093 baseline.",
+          "process": "Ask your accounting/payroll provider to verify the current pay floor against both the federal and Moscow regional thresholds → if anyone falls short, sign a supplementary agreement with them → report the payroll cost impact to headquarters.",
           "hrChecklist": [
-            "Check that every employee's pre-tax base salary meets or exceeds the Moscow regional minimum wage",
+            "Check that every employee's pre-tax base salary meets or exceeds the Moscow regional minimum wage of RUB 39,730 (effective Jan 1, 2026)",
+            "Confirm whether the company ever filed a written motivated refusal to join the 2026 Moscow minimum-wage agreement — if not, you are automatically bound by the RUB 39,730 floor as of now",
             "Recalculate part-time/reduced-hour staff on a pro-rata basis",
             "Update the minimum grade salary in the Pay Regulation (Положение об оплате труда)",
-            "Get written confirmation from your outsourced payroll firm that the 2026 threshold has been applied"
+            "Get written confirmation from your outsourced payroll firm that the 2026 federal and Moscow thresholds have both been applied"
           ],
           "internalDocs": [
             "Pay Regulation (Положение об оплате труда)",
             "Staffing table (штатное расписание)",
-            "Salary clause of the employment contract"
+            "Salary clause of the employment contract",
+            "Text of the Moscow tripartite minimum-wage agreement (to check join/refusal status)"
           ]
         },
         "ru": {
           "background": "Правительство проводит политику поэтапного значительного повышения МРОТ до 2030 года. Рост в 2026 году (+20,7%) особенно велик.",
-          "whatChanged": "Федеральный МРОТ вырос с 22 440 ₽ до 27 093 ₽. Месячная зарплата (до налогов) работника на полной ставке не может быть ниже этой суммы. В Москве действует отдельный, более высокий региональный МРОТ — всегда проверяйте региональный показатель. Дополнительное изменение: за директоров без зарплаты теперь также обязательны страховые взносы, рассчитанные исходя из МРОТ.",
-          "penalty": "Выплата зарплаты ниже МРОТ влечёт штраф по ст. 5.27 КоАП РФ (до 50 000 ₽ за нарушение для юрлица) плюс доплату разницы задним числом. При повторном нарушении штраф увеличивается.",
-          "process": "Запросить у бухгалтерии/аутсорсера проверку текущего минимума зарплат → при обнаружении несоответствия оформить допсоглашение → доложить головному офису о влиянии на ФОТ.",
+          "whatChanged": "① Федеральный МРОТ вырос с 22 440 ₽ до 27 093 ₽. Месячная зарплата (до налогов) работника на полной ставке не может быть ниже этой суммы. ② Москва отдельным трёхсторонним соглашением между Правительством Москвы, профсоюзами и объединениями работодателей установила более высокий региональный МРОТ на 2026 год — 39 730 ₽ (опубликовано 11.12.2025, действует с 01.01.2026). Работодатель, не подавший мотивированный отказ в течение 30 дней после публикации (примерно до 10.01.2026), считается присоединившимся автоматически и обязан платить не менее 39 730 ₽ — если отказ не подавался, компания уже связана этим показателем. ③ За директоров без зарплаты теперь также обязательны страховые взносы, рассчитанные исходя из МРОТ.",
+          "penalty": "Выплата зарплаты ниже применимого минимума влечёт штраф по ст. 5.27 КоАП РФ (до 50 000 ₽ за нарушение для юрлица) плюс доплату разницы задним числом; при повторном нарушении штраф увеличивается. Для работодателей, присоединившихся к московскому соглашению, ориентир — 39 730 ₽, а не федеральные 27 093 ₽.",
+          "process": "Запросить у бухгалтерии/аутсорсера проверку текущего минимума зарплат по федеральному и московскому региональному показателям → при обнаружении несоответствия оформить допсоглашение → доложить головному офису о влиянии на ФОТ.",
           "hrChecklist": [
-            "Проверить, что базовый оклад (до налога) каждого сотрудника не ниже регионального МРОТ Москвы",
+            "Проверить, что базовый оклад (до налога) каждого сотрудника не ниже регионального МРОТ Москвы — 39 730 ₽ (с 01.01.2026)",
+            "Проверить, подавала ли компания мотивированный отказ от присоединения к московскому соглашению о МРОТ на 2026 год — при отсутствии отказа компания уже обязана платить не менее 39 730 ₽",
             "Пересчитать зарплату сотрудников на неполной занятости пропорционально отработанному времени",
             "Обновить минимальный оклад по разрядам в Положении об оплате труда",
-            "Получить письменное подтверждение от аутсорсера по зарплате о применении норматива 2026 года"
+            "Получить письменное подтверждение от аутсорсера по зарплате о применении обоих нормативов 2026 года — федерального и московского"
           ],
           "internalDocs": [
             "Положение об оплате труда",
             "Штатное расписание",
-            "Раздел трудового договора об оплате труда"
+            "Раздел трудового договора об оплате труда",
+            "Текст трёхстороннего соглашения о МРОТ в Москве (для проверки статуса присоединения)"
           ]
         }
       }
@@ -984,22 +996,23 @@
       "impact": "High",
       "effectiveDate": "시행중 (통제 강화 지속)",
       "background": "모든 러시아 법인은 병역 대상 직원(18~30세 남성, 예비역, 군사특기 보유 여성 등)의 명부를 관리하고 군사위원회(военкомат/voenkomat)에 보고할 의무가 있음. 전자 소환장 레지스트리 가동 이후 военкомат·검찰·노동감독의 교차 점검이 일상화되고 벌금이 대폭 상향됨. 외국인 직원은 대상 아님.",
-      "whatChanged": "① 소환장(повестка/summons)이 전자 레지스트리 등재만으로 송달 간주, ② 고용주는 병역 대상자의 채용·퇴직·정보 변경을 военкомат에 통보하고, 소환장 전달·출석 보장 의무, ③ 미이행 벌금: 담당자 4만~8만₽, 법인 최대 35만~50만₽ (출석 통지 미이행 등), ④ 500인 이상 사업장은 매년, 그 외는 3년마다 정기 점검.",
-      "penalty": "법인 벌금 최대 50만₽ + 담당자 개인 벌금. 여러 기관이 중복 부과 가능.",
+      "whatChanged": "① 소환장(повестка/summons)이 전자 레지스트리 등재만으로 송달 간주, ② 고용주는 병역 대상자의 채용·퇴직·정보 변경을 военкомат에 통보하고, 소환장 전달·출석 보장 의무, ③ 미이행 벌금: 담당자 4만~8만₽, 법인 최대 35만~50만₽ (출석 통지 미이행 등), ④ 500인 이상 사업장은 매년, 그 외는 3년마다 정기 점검. ⑤ (모스크바 특칙) 2026년 1월부터 모스크바 소재 법인의 병역 등록 업무(신규 등록, 담당자·주소 변경 신고, 서류 제출, 현장 점검)가 구청별 военкомат에서 시 통합부서 '병역등록 통제·법인점검부(Отдел контроля воинского учета и проверок юрлиц)'로 전면 이관됨 — 주소 г. Москва, ул. Гончарова, 8/13 (1층 '서류접수(Делопроизводство)' 창구), 대표전화 +7 495 618-11-21, 담당 부서장 Ивасюк М.А. 구청 военкомат는 더 이상 법인 서류를 접수하지 않으므로 기존 приказ·서신 대장에 구청 военкомат를 수신처로 적어둔 경우 즉시 갱신 필요. ⑥ форма 18 카드에 담당자 이메일 주소 기재가 신규 필수 항목으로 추가됨.",
+      "penalty": "법인 벌금 최대 50만₽ + 담당자 개인 벌금. 여러 기관이 중복 부과 가능. (모스크바) 서류를 구청 военкомат로 잘못 발송해 기한을 놓치면 통보 지연으로 간주되어 벌금 대상이 될 수 있음.",
       "hrChecklist": [
         "병역 등록 담당자 지정 приказ/prikaz/order 존재 여부 확인 (러시아인 인사 담당자 지정 권장)",
-        "병역 대상 직원 카드(форма 18/Form 18) 전수 작성·최신화",
+        "병역 대상 직원 카드(форма 18/Form 18) 전수 작성·최신화 — 담당자 이메일 주소 기재 여부 포함",
         "채용·퇴직 시 военкомат 통보 프로세스(기한 5일)가 실제로 돌아가는지 점검",
         "법인 소재지 военкомат 등록 여부 확인 (미등록 법인 많음 — 대표적 적발 사유)",
+        "(모스크바 소재 법인) 서류·통지 수신처를 구청 военкомат에서 신규 통합부서(Гончарова 8/13, Отдел контроля воинского учета и проверок юрлиц)로 갱신했는지 확인",
         "동원 관련 상황 변화 시 즉시 본사 보고 라인 유지"
       ],
       "internalDocs": [
         "병역 등록 담당자 지정 приказ",
         "форма 18 카드",
-        "военкомат 서신 대장",
+        "военкомат 서신 대장 (모스크바: 신규 통합부서 주소로 갱신)",
         "연간 계획서"
       ],
-      "process": "현황 감사(등록·카드·통보 이력) → 미비점 보완 → 담당자 교육 → 분기별 자체 점검. 민감 사안(동원 등)은 한국 본사 법무와 사전 협의된 대응 원칙 유지",
+      "process": "현황 감사(등록·카드·통보 이력) → (모스크바 소재 법인) 신규 통합부서(Гончарова 8/13)에 등록 현황 재확인 → 미비점 보완 → 담당자 교육 → 분기별 자체 점검. 민감 사안(동원 등)은 한국 본사 법무와 사전 협의된 대응 원칙 유지",
       "glossary": [
         {
           "term": "военкомат",
@@ -1010,49 +1023,57 @@
           "term": "повестка",
           "ko": "소환장 — 전자 등재만으로 송달 효력 발생",
           "en": "povestka — summons"
+        },
+        {
+          "term": "Отдел контроля воинского учета и проверок юрлиц",
+          "ko": "모스크바시 병역등록 통제·법인점검부 — 2026년 1월부터 구청 военкомат를 대신해 모스크바 소재 법인의 병역 등록 업무를 전담",
+          "en": "Department of Control of Military Registration and Inspections of Legal Entities (Moscow)"
         }
       ],
       "sources": [
         "https://mos.legal/2026/02/15/voinskij-uchet-v-organizaczii-v-2026-godu-obyazannosti-rabotodatelya/",
-        "https://www.kdelo.ru/art/386555-shtrafy-za-voinskiy-uchet"
+        "https://www.kdelo.ru/art/386555-shtrafy-za-voinskiy-uchet",
+        "https://ppt.ru/news/voinskiy-uchet/v-moskve-novyy-poryadok-raboty-s-yurlitsami-po-voinskomu-uchetu"
       ],
       "titleEn": "Military registration, electronic summons registry",
       "i18n": {
         "en": {
           "background": "Every Russian legal entity must maintain a roster of employees subject to military registration (men 18-30, reservists, women with a military specialty, etc.) and report to the local military commissariat (voenkomat). Since the electronic summons registry went live, cross-checks between the voenkomat, prosecutor's office, and labor inspectorate have become routine and fines have risen sharply. Foreign employees are not covered.",
-          "whatChanged": "① A summons is now considered delivered simply by being entered in the electronic registry. ② Employers must notify the voenkomat of hiring, termination, and information changes for registrants, and must ensure summonses are delivered and attendance is guaranteed. ③ Fines for non-compliance: RUB 40K-80K for the responsible individual, up to RUB 350K-500K for the company. ④ Companies with 500+ employees are inspected annually; others every 3 years.",
-          "penalty": "Company fines up to RUB 500,000 plus a separate personal fine for the responsible officer. Multiple agencies can impose overlapping fines.",
-          "process": "Audit current status (registration, cards, notification history) → fix gaps → train the responsible person → self-check quarterly. For sensitive matters (mobilization, etc.), maintain a pre-agreed response protocol coordinated with Korean HQ legal.",
+          "whatChanged": "① A summons is now considered delivered simply by being entered in the electronic registry. ② Employers must notify the voenkomat of hiring, termination, and information changes for registrants, and must ensure summonses are delivered and attendance is guaranteed. ③ Fines for non-compliance: RUB 40K-80K for the responsible individual, up to RUB 350K-500K for the company. ④ Companies with 500+ employees are inspected annually; others every 3 years. ⑤ (Moscow-specific) Since January 2026, all military-registration business for Moscow-registered legal entities — new registrations, changes of officer or address, document filings, on-site inspections — has been transferred from district voenkomats to a single centralized department, the Department of Control of Military Registration and Inspections of Legal Entities. Address: 8/13 Goncharova St., Moscow (1st floor, 'Delo­proizvodstvo' records window); phone +7 495 618-11-21; head of department: M.A. Ivasyuk. District voenkomats no longer accept documents from legal entities, so update any order or correspondence log that still lists a district voenkomat as the recipient. ⑥ Form 18 cards now require the responsible officer's email address as a mandatory new field.",
+          "penalty": "Company fines up to RUB 500,000 plus a separate personal fine for the responsible officer. Multiple agencies can impose overlapping fines. (Moscow) Sending documents to the old district voenkomat and missing a deadline as a result can itself be treated as a late notification and trigger a fine.",
+          "process": "Audit current status (registration, cards, notification history) → (Moscow-registered entities) re-confirm registration status with the new centralized department at 8/13 Goncharova St. → fix gaps → train the responsible person → self-check quarterly. For sensitive matters (mobilization, etc.), maintain a pre-agreed response protocol coordinated with Korean HQ legal.",
           "hrChecklist": [
             "Confirm an order formally appointing a military-registration officer exists (recommend appointing a Russian-national HR staff member)",
-            "Ensure Form 18 cards are fully completed and up to date for every registration-eligible employee",
+            "Ensure Form 18 cards are fully completed and up to date for every registration-eligible employee, including the officer's email address",
             "Verify the hiring/termination notification process to the voenkomat (5-day deadline) is actually being followed",
             "Confirm the company is registered with the voenkomat covering its registered address (many companies are found not to be — a common inspection finding)",
+            "(Moscow-registered entities) Confirm the document/notification recipient has been updated from the district voenkomat to the new centralized department (8/13 Goncharova St., Department of Control of Military Registration and Inspections of Legal Entities)",
             "Maintain an immediate escalation line to Korean HQ for any change in mobilization-related circumstances"
           ],
           "internalDocs": [
             "Order appointing the military-registration officer",
             "Form 18 cards",
-            "Voenkomat correspondence register",
+            "Voenkomat correspondence register (Moscow: update to the new centralized department's address)",
             "Annual plan document"
           ]
         },
         "ru": {
           "background": "Каждое юрлицо в России обязано вести учёт военнообязанных сотрудников (мужчины 18-30 лет, запасники, женщины с военно-учётной специальностью и др.) и отчитываться перед военкоматом. С запуском электронного реестра повесток перекрёстные проверки военкомата, прокуратуры и трудовой инспекции стали регулярными, а штрафы значительно выросли. Иностранные сотрудники учёту не подлежат.",
-          "whatChanged": "① Повестка теперь считается врученной с момента внесения в электронный реестр. ② Работодатель обязан уведомлять военкомат о приёме, увольнении и изменении данных военнообязанных, а также обеспечивать вручение повесток и явку. ③ Штрафы за неисполнение: 40-80 тыс. ₽ для ответственного лица, до 350-500 тыс. ₽ для юрлица. ④ Компании со штатом от 500 человек проверяются ежегодно, остальные — раз в 3 года.",
-          "penalty": "Штраф для юрлица до 500 000 ₽ плюс отдельный штраф для ответственного должностного лица. Несколько ведомств могут налагать штрафы одновременно.",
-          "process": "Провести аудит текущего состояния (регистрация, карточки, история уведомлений) → устранить пробелы → обучить ответственное лицо → проводить самопроверку ежеквартально. По чувствительным вопросам (мобилизация и т.п.) придерживаться заранее согласованного с юротделом головного офиса протокола реагирования.",
+          "whatChanged": "① Повестка теперь считается врученной с момента внесения в электронный реестр. ② Работодатель обязан уведомлять военкомат о приёме, увольнении и изменении данных военнообязанных, а также обеспечивать вручение повесток и явку. ③ Штрафы за неисполнение: 40-80 тыс. ₽ для ответственного лица, до 350-500 тыс. ₽ для юрлица. ④ Компании со штатом от 500 человек проверяются ежегодно, остальные — раз в 3 года. ⑤ (Только для Москвы) С января 2026 года все вопросы воинского учёта юридических лиц, зарегистрированных в Москве — новая постановка на учёт, изменение ответственного лица или адреса, подача документов, проверки — переданы из районных военкоматов в единый Отдел контроля воинского учёта и проверок юрлиц. Адрес: г. Москва, ул. Гончарова, 8/13 (1 этаж, окно 'Делопроизводство'); телефон +7 495 618-11-21; начальник отдела — М.А. Ивасюк. Районные военкоматы больше не принимают документы от юрлиц, поэтому приказы и журналы переписки, где получателем указан районный военкомат, нужно обновить. ⑥ В карточке формы №18 теперь обязательно указывать адрес электронной почты ответственного лица.",
+          "penalty": "Штраф для юрлица до 500 000 ₽ плюс отдельный штраф для ответственного должностного лица. Несколько ведомств могут налагать штрафы одновременно. (Москва) Отправка документов в прежний районный военкомат и пропуск срока из-за этого сама по себе может быть расценена как несвоевременное уведомление и повлечь штраф.",
+          "process": "Провести аудит текущего состояния (регистрация, карточки, история уведомлений) → (для юрлиц, зарегистрированных в Москве) уточнить статус учёта в новом едином отделе по адресу ул. Гончарова, 8/13 → устранить пробелы → обучить ответственное лицо → проводить самопроверку ежеквартально. По чувствительным вопросам (мобилизация и т.п.) придерживаться заранее согласованного с юротделом головного офиса протокола реагирования.",
           "hrChecklist": [
             "Проверить наличие приказа о назначении ответственного за воинский учёт (рекомендуется назначать сотрудника-гражданина РФ)",
-            "Обеспечить полное и актуальное заполнение карточек формы №18 на всех военнообязанных сотрудников",
+            "Обеспечить полное и актуальное заполнение карточек формы №18 на всех военнообязанных сотрудников, включая адрес электронной почты ответственного лица",
             "Проверить фактическую работу процесса уведомления военкомата о приёме/увольнении (срок 5 дней)",
             "Проверить постановку организации на учёт в военкомате по месту регистрации (многие компании не встают на учёт — частое основание для штрафа)",
+            "(Для юрлиц, зарегистрированных в Москве) Проверить, что адресатом документов/уведомлений указан не районный военкомат, а новый единый Отдел контроля воинского учёта и проверок юрлиц (ул. Гончарова, 8/13)",
             "Поддерживать канал немедленной эскалации в головной офис в Корее при изменении обстоятельств, связанных с мобилизацией"
           ],
           "internalDocs": [
             "Приказ о назначении ответственного за воинский учёт",
             "Карточки формы №18",
-            "Реестр переписки с военкоматом",
+            "Реестр переписки с военкоматом (Москва: обновить на адрес нового единого отдела)",
             "Годовой план мероприятий"
           ]
         }
