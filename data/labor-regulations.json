@@ -2,7 +2,7 @@
   "meta": {
     "title": "러시아 노동법 Checker — HR용",
     "audience": "러시아 법인 한국인 인사총괄 (러시아법 배경지식 없음 전제)",
-    "lastUpdated": "2026-08-03",
+    "lastUpdated": "2026-08-10",
     "note": "한글 기본 + 러시아어 용어는 영어 병기(러시아어/English). 출처는 각 항목 sources 참조.",
     "statusLegend": {
       "시행중": "이미 발효되어 지금 준수해야 하는 규정",
@@ -1300,26 +1300,26 @@
     {
       "id": "LAB-017",
       "category": "채용·해고",
-      "titleKo": "졸업생 인턴십(стажировка) 정식 근로계약 유형 신설",
-      "titleRu": "Закон о стажировке выпускников — новая глава ТК РФ",
-      "titleEn": "New graduate 'internship' (stazhirovka) employment contract type",
-      "status": "계류중",
+      "titleKo": "졸업생 인턴십(стажировка) 정식 근로계약 유형 신설 — 246-ФЗ 공포",
+      "titleRu": "Федеральный закон № 246-ФЗ от 26.07.2026 — стажировка выпускников в ТК РФ",
+      "titleEn": "New graduate 'internship' (stazhirovka) employment contract type — Law No. 246-FZ signed",
+      "status": "시행예정",
       "impact": "Medium",
       "effectiveDate": "2027-03-01",
-      "background": "인력난 및 청년 취업난 대응 차원에서 대통령이 ПМЭФ-2026(상트페테르부르크 국제경제포럼)에서 관련 법안의 신속 처리를 요청. 2026-07-08 국가두마 2·3독회 통과(법안번호 및 대통령 서명·연방관보 게재 절차는 확인 대기 중).",
+      "background": "인력난 및 청년 취업난 대응 차원에서 대통령이 ПМЭФ-2026(상트페테르부르크 국제경제포럼)에서 관련 법안의 신속 처리를 요청. 2026-07-08 국가두마 2·3독회 통과, 2026-07-17 연방회의(상원) 승인, 2026-07-26 대통령 서명 및 연방법 제246-ФЗ호로 공포 완료. 시행일은 2027-03-01로 확정.",
       "whatChanged": "① '스타지롭카(стажировка)'를 정식 근로계약 유형으로 신설 — 전문대·대학 졸업(예정)자 또는 재교육 과정 이수(예정)자가 첫 실무 경력을 쌓기 위해 체결하는 기간제 근로계약(срочный трудовой договор). ② 계약기간 최대 6개월, 급여·근속연수·병가 등 일반 근로자와 동일한 권리 보장(무급 실습 금지). ③ 멘토링(наставничество) 의무 배정. ④ 스타지요르(стажёр) 직함을 직제표·계약서에 명시. ⑤ 졸업 후 1년 이내에 계약 체결해야 함. ⑥ 같은 회사가 스타지롭카 종료 후 정식 채용 시 시험기간(수습) 면제. ⑦ 공무원·지자체 공무원 및 기존 산업안전 실습·자격 실습 제도에는 적용되지 않음.",
-      "penalty": "통과·공포 전이므로 직접 벌칙은 아직 없음. 시행 시 스타지롭카 계약을 일반 무급 인턴/수습으로 잘못 운영하면 위장 도급·미지급 임금 문제로 근로감독청 제재 및 소급 임금 지급 리스크 발생 가능.",
+      "penalty": "법은 공포되었으나 시행일(2027-03-01) 전이므로 직접 벌칙은 아직 없음. 시행 후 스타지롭카 계약을 일반 무급 인턴/수습으로 잘못 운영하면 위장 도급·미지급 임금 문제로 근로감독청 제재 및 소급 임금 지급 리스크 발생 가능.",
       "hrChecklist": [
         "신입/졸업예정자 채용 프로그램(인턴십 등)이 있는 경우 현재 운영 방식(유급 여부·계약 형태) 점검",
-        "법 공포·시행일(2027-03-01 예정) 확정 여부 분기별 확인",
-        "시행 확정 시 스타지롭카 전용 계약서 템플릿과 멘토 지정 절차 준비",
+        "시행일(2027-03-01)까지 남은 기간을 기준으로 준비 일정 수립 — 더 이상 공포 여부 확인 단계 아님",
+        "시행 전까지 스타지롭카 전용 계약서 템플릿과 멘토 지정 절차 준비",
         "인사팀·현업 부서에 '무급 인턴' 관행 폐지 필요성 사전 공지"
       ],
       "internalDocs": [
         "신입사원 채용 절차서",
         "인턴십/수습 관련 내부 규정"
       ],
-      "process": "2·3독회 통과 상태 — 대통령 서명·연방관보 게재 여부 분기별 모니터링 → 공포 확인 시 노무 자문과 계약서·절차 정비",
+      "process": "246-ФЗ 공포 완료(2026-07-26) — 노무 자문과 함께 2027-03-01 시행에 대비한 계약서·절차 정비 착수 → 시행 임박 시(2026년 말~2027년 초) 최종 점검",
       "glossary": [
         {
           "term": "стажировка",
@@ -1328,19 +1328,20 @@
         }
       ],
       "sources": [
-        "https://ria.ru/20260708/gosduma-2103523664.html",
-        "https://vladnews.ru/2026-07-09/271066/gosduma_prinyala"
+        "https://ria.ru/20260726/putin-2107087476.html",
+        "https://www.audit-it.ru/news/personnel/1136948.html",
+        "https://ria.ru/20260708/gosduma-2103523664.html"
       ],
       "i18n": {
         "en": {
-          "background": "Aimed at easing labor shortages and youth unemployment, the President asked for expedited passage of this bill at SPIEF-2026 (St. Petersburg International Economic Forum). The State Duma passed it on its 2nd and 3rd readings on 2026-07-08 (Federation Council approval and presidential signature/publication are still pending confirmation).",
+          "background": "Aimed at easing labor shortages and youth unemployment, the President asked for expedited passage of this bill at SPIEF-2026 (St. Petersburg International Economic Forum). The State Duma passed it on its 2nd and 3rd readings on 2026-07-08, the Federation Council approved it on 2026-07-17, and the President signed it into law on 2026-07-26 as Federal Law No. 246-FZ. The confirmed effective date is 2027-03-01.",
           "whatChanged": "① Creates 'stazhirovka' (internship) as a formal employment-contract type — a fixed-term contract for people who have graduated or are graduating from vocational/higher education, or completing retraining, to gain their first work experience. ② Maximum term of 6 months, with the same rights as regular employees — pay, seniority credit, sick leave (unpaid internships are prohibited). ③ Mandatory mentor assignment. ④ The 'stazhyor' (intern) title must appear in the staffing table and contract. ⑤ The contract must be signed within 1 year of graduation. ⑥ If the same employer hires the person permanently afterward, no probationary period applies. ⑦ Does not apply to civil servants/municipal employees or to existing safety-training/licensing internships.",
-          "penalty": "No direct penalty yet since the bill is not yet promulgated. Once in force, misclassifying a stazhirovka contract as an unpaid internship or informal arrangement risks labor-inspectorate sanctions and retroactive wage claims for disguised/unpaid employment.",
-          "process": "Currently passed 2nd/3rd Duma reading — monitor quarterly for Federation Council approval and presidential signature/publication → once promulgated, work with a labor advisor to prepare a dedicated contract template and mentor-assignment procedure.",
+          "penalty": "The law is now signed but not yet in force (effective 2027-03-01), so there is no direct penalty yet. Once in force, misclassifying a stazhirovka contract as an unpaid internship or informal arrangement risks labor-inspectorate sanctions and retroactive wage claims for disguised/unpaid employment.",
+          "process": "Law No. 246-FZ is signed and published (2026-07-26) — begin preparing the contract template and procedures with a labor advisor ahead of the 2027-03-01 effective date → do a final review as the effective date approaches (late 2026 / early 2027).",
           "hrChecklist": [
             "If the company runs a new-graduate hiring/internship program, review its current setup (paid status, contract type)",
-            "Check quarterly whether the law has been promulgated (effective date targeted for 2027-03-01)",
-            "Once confirmed, prepare a dedicated stazhirovka contract template and mentor-assignment procedure",
+            "Build a readiness timeline against the confirmed effective date (2027-03-01) — this is no longer a wait-and-see item",
+            "Before the effective date, prepare a dedicated stazhirovka contract template and mentor-assignment procedure",
             "Notify HR and line managers in advance that unpaid-internship practices will need to be phased out"
           ],
           "internalDocs": [
@@ -1349,14 +1350,14 @@
           ]
         },
         "ru": {
-          "background": "В целях смягчения дефицита кадров и молодёжной безработицы Президент на ПМЭФ-2026 попросил ускорить принятие данного законопроекта. Госдума приняла его во втором и третьем чтениях 08.07.2026 (одобрение Советом Федерации и подписание Президентом/публикация пока не подтверждены).",
+          "background": "В целях смягчения дефицита кадров и молодёжной безработицы Президент на ПМЭФ-2026 попросил ускорить принятие данного законопроекта. Госдума приняла его во втором и третьем чтениях 08.07.2026, Совет Федерации одобрил закон 17.07.2026, а 26.07.2026 Президент подписал его как Федеральный закон № 246-ФЗ. Подтверждённая дата вступления в силу — 01.03.2027.",
           "whatChanged": "① Вводится «стажировка» как формальный вид трудового договора — срочный трудовой договор для лиц, получивших или получающих среднее профессиональное/высшее образование либо проходящих переподготовку, для получения первого профессионального опыта. ② Максимальный срок — 6 месяцев, с теми же правами, что и у обычных работников: оплата, трудовой стаж, больничный (неоплачиваемые стажировки запрещены). ③ Обязательное назначение наставника. ④ Должность «стажёр» должна быть указана в штатном расписании и договоре. ⑤ Договор должен быть заключён не позднее одного года после получения образования. ⑥ При последующем постоянном трудоустройстве у того же работодателя испытательный срок не устанавливается. ⑦ Не распространяется на госслужащих/муниципальных служащих и на существующие стажировки по охране труда/допуску к профессии.",
-          "penalty": "Прямых санкций пока нет, так как закон не опубликован. После вступления в силу оформление стажировки как неоплачиваемой практики или неформальной договорённости повлечёт риск санкций ГИТ и взыскания зарплаты задним числом за скрытые трудовые отношения.",
-          "process": "На данный момент принят во 2 и 3 чтениях Госдумой — ежеквартально отслеживать одобрение Советом Федерации и подписание/публикацию Президентом → после опубликования подготовить с юристом отдельный шаблон договора о стажировке и процедуру назначения наставника.",
+          "penalty": "Закон подписан, но ещё не вступил в силу (дата вступления — 01.03.2027), поэтому прямых санкций пока нет. После вступления в силу оформление стажировки как неоплачиваемой практики или неформальной договорённости повлечёт риск санкций ГИТ и взыскания зарплаты задним числом за скрытые трудовые отношения.",
+          "process": "Закон № 246-ФЗ подписан и опубликован (26.07.2026) — начать с юристом подготовку шаблона договора и процедур до наступления даты вступления в силу 01.03.2027 → провести финальную проверку ближе к дате вступления в силу (конец 2026 — начало 2027 года).",
           "hrChecklist": [
             "Если в компании есть программа найма/стажировок для выпускников, проверить текущий формат (оплачиваемость, вид договора)",
-            "Ежеквартально проверять факт опубликования закона (целевая дата вступления в силу — 01.03.2027)",
-            "После подтверждения подготовить отдельный шаблон договора о стажировке и процедуру назначения наставника",
+            "Составить график подготовки к подтверждённой дате вступления в силу (01.03.2027) — вопрос публикации закона уже закрыт",
+            "До даты вступления в силу подготовить отдельный шаблон договора о стажировке и процедуру назначения наставника",
             "Заранее уведомить HR и руководителей подразделений о необходимости отказа от практики неоплачиваемых стажировок"
           ],
           "internalDocs": [
