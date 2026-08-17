@@ -2,7 +2,7 @@
   "meta": {
     "title": "러시아 노동법 Checker — HR용",
     "audience": "러시아 법인 한국인 인사총괄 (러시아법 배경지식 없음 전제)",
-    "lastUpdated": "2026-08-10",
+    "lastUpdated": "2026-08-17",
     "note": "한글 기본 + 러시아어 용어는 영어 병기(러시아어/English). 출처는 각 항목 sources 참조.",
     "statusLegend": {
       "시행중": "이미 발효되어 지금 준수해야 하는 규정",
@@ -1363,6 +1363,162 @@
           "internalDocs": [
             "Процедура найма новых сотрудников",
             "Внутреннее положение о стажировках/испытательном сроке"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-018",
+      "category": "외국인·주재원",
+      "titleKo": "2026년 외국인 근로자 업종별 고용 허용비율(допустимая доля) — 모스크바 주류·담배 소매 15% 특례",
+      "titleRu": "Допустимая доля иностранных работников на 2026 год (Постановление Правительства РФ №1995 от 05.12.2025)",
+      "titleEn": "2026 Allowable Share of Foreign Workers by Industry — Moscow's Alcohol/Tobacco Retail Exception",
+      "status": "시행중",
+      "impact": "Medium",
+      "effectiveDate": "2026-01-01",
+      "background": "정부가 매년 업종별로 외국인 근로자 고용 가능 비율(허용비율)을 정하는 규정으로, 2026년판이 2025-12-05 정부령 제1995호로 공포됨(2025-12-20 시행, 2026년 한 해 적용). 전년(2025년) 대비 다수 업종에서 허용비율이 축소됨.",
+      "whatChanged": "① 소매(주류·담배 전문점 등)·건설·임업·목재가공·운수 등 지정 업종에서 총 인력 중 외국인 비율 상한 설정. ② 원칙상 주류·담배 소매(전문점)는 연방 기준 외국인 고용 0%(전면 금지)이나, 모스크바시는 예외적으로 15%까지 허용 — 타 지역과 다른 모스크바 특례. ③ 업종·지역별 세부 비율은 사업장의 실제 ОКВЭД(경제활동분류코드) 기준으로 적용되므로, 소매·유통·건설·운수 등 해당 업종에 외국인(ЕАЭС/EAEU 회원국 국적자·RVP/ВНЖ 소지자는 산정 제외) 인력을 쓰는 경우 반드시 개별 확인 필요. ④ 위반 시 초과 고용 인원에 대해 즉시 인력 조정 의무.",
+      "penalty": "법인 벌금 80만~100만₽ 또는 영업정지 14~90일. 담당 임원 개인 벌금 4.5만~5만₽. 직접 채용 인력뿐 아니라 파견·아웃소싱 인력의 국적 구성도 산정에 포함될 수 있어 확인 필요.",
+      "hrChecklist": [
+        "회사(및 계열사·매장)의 등록 ОКВЭД 코드가 허용비율 지정 업종에 해당하는지 확인",
+        "해당 시 전체 인력 대비 외국인(ЕАЭС 국가·RVP·ВНЖ 소지자 제외) 비율을 산정해 상한 초과 여부 점검",
+        "모스크바 소재 매장이 주류·담배를 취급하는 경우 15% 상한 준수 여부 별도 확인",
+        "파견·아웃소싱 인력의 국적 구성도 원청 기준 비율 산정에 포함되는지 현지 노무 자문사에 확인",
+        "상한 초과 시 신규 채용 중단 및 인력 재편 계획 수립"
+      ],
+      "internalDocs": [
+        "인력 현황표 (국적·체류자격별)",
+        "ОКВЭД 등록 현황 확인서",
+        "파견·아웃소싱 계약서 (인력 국적 조항 점검)"
+      ],
+      "process": "현지 노무 자문사에 ОКВЭД 코드별 적용 여부 확인 → 인력 현황 국적별 집계 → 상한 초과 시 본사 HR 보고 및 인력 재편 계획 수립 → 채용 프로세스·ЛНА에 반영",
+      "glossary": [
+        {
+          "term": "допустимая доля иностранных работников",
+          "ko": "업종별 외국인 근로자 고용 허용비율 — 정부가 매년 업종·지역별로 상한을 지정",
+          "en": "dopustimaya dolya — allowable share of foreign workers by industry/region"
+        }
+      ],
+      "sources": [
+        "http://publication.pravo.gov.ru/document/0001202512120034",
+        "https://www.confidencegroup.ru/info/news/novye-ogranicheniya-na-trud-migrantov-sokrashchenie-doli-inostrannykh-rabotnikov/",
+        "https://www.consultant.ru/document/cons_doc_LAW_521396/"
+      ],
+      "i18n": {
+        "en": {
+          "background": "The government sets an annual cap on the share of foreign workers permitted per industry. The 2026 cap was published as Government Resolution No. 1995 of 5 December 2025 (in force from 20 December 2025, applicable for calendar year 2026). Caps were tightened for most industries compared with 2025.",
+          "whatChanged": "① A ceiling is set on the foreign-worker share of total headcount in designated industries — retail (specialized alcohol/tobacco stores), construction, forestry, wood processing, transport, and others. ② The federal baseline for alcohol/tobacco retail is a full ban on foreign workers (0%), but Moscow carries a city-specific exception allowing up to 15% — different from other regions. ③ The applicable cap depends on the entity's actual OKVED economic-activity code, so any retail, distribution, construction, or transport operation employing foreign nationals (EAEU citizens and RVP/residence-permit holders are excluded from the count) must check its own figure. ④ Employers exceeding the cap must adjust headcount immediately.",
+          "penalty": "Corporate fine of RUB 800,000–1,000,000, or business suspension for 14–90 days. Personal fine for the responsible officer of RUB 45,000–50,000. Outsourced/agency staff nationality mix may also count toward the ratio — verify with local counsel.",
+          "process": "Confirm applicability by OKVED code with local labor counsel → tally headcount by nationality → if over the cap, report to HQ HR and plan a headcount adjustment → reflect the result in the hiring process and LNA.",
+          "hrChecklist": [
+            "Confirm whether the company's (and any affiliate store's) registered OKVED code falls under an industry with an allowable-share cap",
+            "If so, calculate the foreign-national share of total headcount (excluding EAEU citizens and RVP/residence-permit holders) and check against the cap",
+            "For Moscow-based stores selling alcohol or tobacco, separately verify compliance with the 15% cap",
+            "Check with local labor counsel whether outsourced/agency staff nationality also counts toward the client entity's ratio",
+            "If over the cap, halt new hiring and prepare a headcount-adjustment plan"
+          ],
+          "internalDocs": [
+            "Headcount roster by nationality and residency status",
+            "OKVED registration confirmation",
+            "Outsourcing/staffing agency contracts (check nationality-mix clauses)"
+          ]
+        },
+        "ru": {
+          "background": "Правительство ежегодно устанавливает предельную долю иностранных работников по видам экономической деятельности. Доля на 2026 год утверждена Постановлением Правительства РФ №1995 от 05.12.2025 (вступило в силу 20.12.2025, действует на 2026 год). По большинству видов деятельности доля снижена по сравнению с 2025 годом.",
+          "whatChanged": "① Установлен предельный процент иностранных работников в общей численности персонала для отдельных видов деятельности — розничная торговля (специализированные магазины алкоголя/табака), строительство, лесное хозяйство, деревообработка, транспорт и др. ② По общему федеральному правилу розничная торговля алкоголем/табаком в специализированных магазинах — полный запрет на привлечение иностранных работников (0%), но для Москвы установлено исключение — до 15%, что отличается от остальных регионов. ③ Конкретная доля зависит от фактического кода ОКВЭД организации, поэтому любой компании, ведущей розничную, дистрибьюторскую, строительную или транспортную деятельность с привлечением иностранных граждан (кроме граждан ЕАЭС и обладателей РВП/ВНЖ), необходимо проверить применимый показатель индивидуально. ④ При превышении доли работодатель обязан незамедлительно скорректировать численность.",
+          "penalty": "Штраф для юрлица 800 000–1 000 000 ₽ либо приостановление деятельности на 14–90 суток. Штраф для ответственного должностного лица 45 000–50 000 ₽. В расчёт доли может включаться и национальный состав аутсорсингового/агентского персонала — требуется уточнение у местного юриста.",
+          "process": "Уточнить применимость по коду ОКВЭД у местного юриста по труду → рассчитать долю персонала по гражданству → при превышении доли доложить в HQ HR и подготовить план корректировки численности → отразить в процессе найма и в ЛНА.",
+          "hrChecklist": [
+            "Проверить, подпадает ли зарегистрированный код ОКВЭД компании (и её магазинов/филиалов) под вид деятельности с установленной долей",
+            "При необходимости рассчитать долю иностранных граждан (кроме граждан ЕАЭС и обладателей РВП/ВНЖ) в общей численности и сверить с лимитом",
+            "Для московских магазинов, торгующих алкоголем или табаком, отдельно проверить соблюдение лимита в 15%",
+            "Уточнить у местного юриста, включается ли национальный состав аутсорсингового/агентского персонала в расчёт доли принимающей организации",
+            "При превышении лимита приостановить новый найм и подготовить план корректировки численности"
+          ],
+          "internalDocs": [
+            "Реестр персонала по гражданству и статусу пребывания",
+            "Справка о регистрации по коду ОКВЭД",
+            "Договоры аутсорсинга/аутстаффинга (проверить пункты о гражданстве персонала)"
+          ]
+        }
+      }
+    },
+    {
+      "id": "LAB-019",
+      "category": "채용·해고",
+      "titleKo": "재택·유연근무 신청권 확대 법안 — 다자녀·1급 장애인 돌봄자 주1회 + 임신부 원격근무권 (모스크바시의회 지지)",
+      "titleRu": "Законопроекты о праве на дистанционную/гибкую работу для многодетных, опекунов инвалидов I группы и беременных",
+      "titleEn": "Bills expanding remote/flexible-work request rights — caregivers and pregnant employees",
+      "status": "계류중",
+      "impact": "Medium",
+      "effectiveDate": "계류중 (2026년 7~8월 발의, 두마 심의 중)",
+      "effectiveDateI18n": {
+        "en": "Pending in the Duma (bills introduced Jul–Aug 2026; no fixed effective date yet)",
+        "ru": "На рассмотрении Госдумы (законопроекты внесены в июле–августе 2026 года; дата вступления в силу не определена)"
+      },
+      "background": "재택근무 확산 흐름 속에서 특정 취약계층 근로자에게 원격·유연근무를 '요청할 권리'를 부여하는 법안 2건이 잇따라 국가두마(Госдума)에 발의됨. ① LDPR(자유민주당) 대표 슬루츠키(Слуцкий) 발의 법안(2026-07-30 발의) — 다자녀·한부모·장애아동 양육자·1급 장애인 돌봄자 대상, ② 임신부 원격근무권 법안(2026-08-07 발의). 모스크바시의회(Мосгордума)는 ①번 법안을 지지하는 결의안을 채택해 연방 차원 통과를 촉구한 상태 — 모스크바 소재 법인 다수의 인사 실무에 영향을 줄 가능성이 높은 지역발 입법 이슈.",
+      "whatChanged": "① [다자녀 등 법안] 다자녀(2자녀 이상) 부모, 한부모, 장애아동 양육자, 1급 장애인 돌봄자에게 주 최소 1일 원격근무 또는 유연근무 전환을 '신청할 권리' 부여. 사용자는 신청 접수 후 3영업일 내 검토·회신 의무. 직무 특성상 불가능한 경우 서면으로 구체적 사유를 명시한 거부(мотивированный отказ)가 필요. 승인 시 근로계약 부속합의서 체결. ② [임신부 법안] 의사 소견서를 근거로 임신 기간에 한정해 원격근무 신청권 부여 — 사용자는 3영업일 내 부속합의서 체결 또는 서면 거부 의무. 재택 불가 직무는 기존 ТК РФ상 작업량 경감·전배·유급휴가 조항이 계속 적용. ③ 두 법안 모두 원격근무 전환을 이유로 급여·근무시간·기타 근로조건을 불리하게 변경할 수 없다고 명시. ④ 두 법안 모두 현재 국가두마 계류 중이며 확정 시행일 미정(임신부 법안은 통과 시에도 공포 후 90일 경과·2027-09-01 이전 시행 금지 조항 포함).",
+      "penalty": "아직 시행 전 단계로 확정된 벌금 규정 없음. 통과 시 신청 미검토·부당 거부는 근로자 신고 기반 ГИТ(국가노동감독청) 조사 사유가 될 수 있음 — 최종 조문 공포 시 벌금 규정 재확인 필요.",
+      "hrChecklist": [
+        "해당 대상 직원(다자녀·한부모·장애아동 양육·1급 장애인 돌봄·임신) 현황 사전 파악",
+        "원격근무 신청 접수 및 3영업일 내 회신 프로세스 초안 마련 (법안 통과 대비)",
+        "직무별 원격근무 가능 여부(고객 대면·설비 조작 등 거부 가능 사유) 사전 분류",
+        "근로계약 부속합의서 표준 양식 준비",
+        "법안 진행상황을 담당 노무 자문사를 통해 월 단위로 모니터링하고 통과 임박 시 본사 HR에 보고"
+      ],
+      "internalDocs": [
+        "ПВТР(취업규칙) 원격근무 관련 조항",
+        "근로계약서 표준 부속합의서 양식",
+        "직무기술서 (원격근무 가능여부 표기)"
+      ],
+      "process": "노무 자문사를 통한 법안 진행상황 모니터링(월 1회) → 대상 직원 현황 사전 파악 → 통과 임박 시 ЛНА·부속합의서 초안 작성 → 노무 자문사 검토 → 통과·공포 후 즉시 시행 및 직원 통지",
+      "glossary": [
+        {
+          "term": "мотивированный отказ",
+          "ko": "서면 사유 명시 거부 — 근로자 신청을 거절할 때 구체적 사유를 문서로 밝혀야 하는 절차",
+          "en": "motivirovanny otkaz — a written, reasoned refusal of an employee request"
+        }
+      ],
+      "sources": [
+        "https://www.mentoday.ru/life/news/30-07-2026/rossiyane-mogut-poluchit-pravo-na-udalenku-ego-mojno-budet-oformit-oficialno/",
+        "https://www.klerk.ru/buh/news/703581/",
+        "https://dep01.duma.mos.ru/news/20955"
+      ],
+      "i18n": {
+        "en": {
+          "background": "Amid the continued spread of remote work, two bills have been introduced in the State Duma in quick succession granting certain vulnerable categories of employees the right to request remote or flexible work. ① A bill from LDPR leader Leonid Slutsky (introduced 30 July 2026) — covering parents of two or more children, single parents, parents of children with disabilities, and caregivers of Group I disabled persons. ② A bill granting pregnant employees a right to remote work (introduced 7 August 2026). The Moscow City Duma (Mosgorduma) adopted a resolution supporting bill ① and urging its passage at the federal level — a regionally-driven legislative push likely to affect HR practice at many Moscow-based entities.",
+          "whatChanged": "① [Caregivers bill] Grants parents of 2+ children, single parents, parents of children with disabilities, and caregivers of Group I disabled persons the right to request conversion to remote or flexible work for at least one day per week. The employer must review and respond to the request within 3 business days. If the role's nature makes it impossible, the employer must issue a written refusal stating specific reasons (a \"motivated refusal\"). If approved, the parties sign an addendum to the employment contract. ② [Pregnant-employee bill] Grants a right to request remote work for the duration of the pregnancy, based on a doctor's certificate; the employer must sign an addendum or issue a written refusal within 3 business days. Where remote work is not possible, existing TK RF protections (reduced output norms, transfer, or paid leave) continue to apply. ③ Both bills explicitly bar reducing pay, changing working hours, or otherwise worsening terms as a consequence of switching to remote work. ④ Both bills remain pending in the State Duma with no fixed effective date (the pregnant-employee bill, if passed, could not take effect before 90 days after publication and no earlier than 1 September 2027).",
+          "penalty": "Not yet in force, so no finalized fine regime exists. Once passed, failing to review a request or an unjustified refusal could become grounds for a GIT (State Labor Inspectorate) investigation triggered by an employee complaint — confirm the exact penalty once the final text is promulgated.",
+          "process": "Monitor bill progress monthly via local labor counsel → identify employees who would qualify in advance → once passage looks imminent, draft the LNA and contract-addendum templates → have local counsel review → implement and notify employees immediately upon passage and promulgation.",
+          "hrChecklist": [
+            "Identify in advance which employees would qualify (parents of 2+ children, single parents, caregivers of a disabled child or Group I disabled adult, pregnant employees)",
+            "Draft an intake-and-3-business-day-response process for remote-work requests, ready for when the bill passes",
+            "Pre-classify roles by whether remote work is feasible (e.g., customer-facing or equipment-operating roles as grounds for refusal)",
+            "Prepare a standard employment-contract addendum template for approved remote-work conversions",
+            "Have local labor counsel track the bills' progress monthly and flag HQ HR when passage looks imminent"
+          ],
+          "internalDocs": [
+            "Internal labor rules (PVTR) — remote-work provisions",
+            "Standard employment-contract addendum template",
+            "Job descriptions (flagged for remote-work feasibility)"
+          ]
+        },
+        "ru": {
+          "background": "На фоне продолжающегося распространения удалённой работы в Государственную Думу подряд внесены два законопроекта, предоставляющие отдельным категориям работников право запросить переход на дистанционный или гибкий график. ① Законопроект лидера ЛДПР Леонида Слуцкого (внесён 30.07.2026) — для родителей двух и более детей, одиноких родителей, родителей детей-инвалидов и опекунов инвалидов I группы. ② Законопроект о праве беременных на дистанционную работу (внесён 07.08.2026). Московская городская Дума приняла постановление в поддержку законопроекта ① и призвала к его принятию на федеральном уровне — региональная законодательная инициатива, способная повлиять на кадровую практику многих московских компаний.",
+          "whatChanged": "① [Законопроект для опекунов] Предоставляет родителям 2+ детей, одиноким родителям, родителям детей-инвалидов и опекунам инвалидов I группы право запросить переход на дистанционную или гибкую работу минимум на один день в неделю. Работодатель обязан рассмотреть и дать ответ на заявление в течение 3 рабочих дней. Если характер должности делает это невозможным, работодатель обязан дать письменный мотивированный отказ с указанием конкретных причин. При одобрении стороны подписывают дополнительное соглашение к трудовому договору. ② [Законопроект для беременных] Предоставляет право на дистанционную работу на период беременности на основании медицинского заключения; работодатель обязан подписать доп. соглашение или дать письменный отказ в течение 3 рабочих дней. Если дистанционная работа невозможна, продолжают действовать существующие гарантии ТК РФ (снижение норм выработки, перевод, оплачиваемый отпуск). ③ Оба законопроекта прямо запрещают снижение зарплаты, изменение рабочего времени или иное ухудшение условий в связи с переходом на удалённый формат. ④ Оба законопроекта пока находятся на рассмотрении Госдумы, дата вступления в силу не определена (закон о беременных, в случае принятия, не может вступить в силу ранее чем через 90 дней после опубликования и не ранее 01.09.2027).",
+          "penalty": "Закон ещё не вступил в силу, окончательный режим штрафов не установлен. После принятия непредоставление ответа на заявление или необоснованный отказ могут стать основанием для проверки ГИТ по жалобе работника — точный размер штрафа нужно будет уточнить после публикации окончательного текста.",
+          "process": "Ежемесячный мониторинг хода законопроектов через местного юриста по труду → заблаговременное определение сотрудников, подпадающих под категории → при приближении принятия — подготовка проектов ЛНА и допсоглашения → проверка местным юристом → внедрение и уведомление сотрудников сразу после принятия и опубликования закона.",
+          "hrChecklist": [
+            "Заранее определить сотрудников, которые подпадут под категории (родители 2+ детей, одинокие родители, опекуны ребёнка-инвалида или инвалида I группы, беременные)",
+            "Подготовить процесс приёма заявлений на удалённую работу с ответом в течение 3 рабочих дней — к моменту принятия закона",
+            "Заранее классифицировать должности по возможности дистанционной работы (например, работа с клиентами или оборудованием как основание для отказа)",
+            "Подготовить типовой шаблон дополнительного соглашения к трудовому договору для одобренных случаев",
+            "Поручить местному юристу ежемесячно отслеживать ход законопроектов и заранее информировать HR головного офиса при приближении принятия"
+          ],
+          "internalDocs": [
+            "ПВТР — положения о дистанционной работе",
+            "Типовой шаблон дополнительного соглашения к трудовому договору",
+            "Должностные инструкции (с отметкой о возможности удалённой работы)"
           ]
         }
       }
